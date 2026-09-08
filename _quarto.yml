@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Jacob Willson"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: analytics.qmd
+        text: Analytics
+      - href: about.qmd
+        text: About
+      - href: cv.qmd
+        text: CV
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+
+execute:
+  freeze: auto
