@@ -1,9 +1,14 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
+    - "projects/*.qmd"
+    - "dashboards/*.qmd"
 
 website:
   title: "Jacob Willson"
+  site-url: "https://jacobwillson.com"
   navbar:
     left:
       - href: index.qmd

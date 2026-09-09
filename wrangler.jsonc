@@ -1,6 +1,7 @@
 {
   "name": "portfolio-site",
   "compatibility_date": "2026-09-01",
+  "workers_dev": false,
   "assets": {
     "directory": "./_site"
   }
