@@ -33,6 +33,11 @@ Business intelligence and data professional with more than a decade of experienc
 
 ## Professional Experience
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/afrl.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### Griffiss Institute / Air Force Research Laboratory
 
 **AI Research Fellow** · May 2026–Present
@@ -45,7 +50,14 @@ Business intelligence and data professional with more than a decade of experienc
 - Developed a reusable agentic-development methodology defining project intake, agent roles, workflow decision trees, LLM skill files, and quality gates.
 - Configured a two-node NVIDIA DGX Spark cluster and benchmarked LLM inference configurations for throughput and latency.
 - Built a reproducible development environment on DGX Spark hardware for incoming interns and contractors, automating the provisioning of Open WebUI, Tailscale, VS Code, and coding agents to mirror on-premises servers.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/midtown-utica.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### Midtown Utica Community Center · Utica, New York
 
 **AI Deployment Consultant (Volunteer)** · April 2026–Present
@@ -54,7 +66,14 @@ Business intelligence and data professional with more than a decade of experienc
 - Deployed Google Gemini and integrated it with the organization's Gmail, Calendar, and Google Drive for daily staff use.
 - Established multi-user Anthropic access supporting grant writing and organizational project work.
 - Trained all five full-time staff members, including leadership, on day-to-day use and data-handling and privacy practices for client information.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/suny-poly.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### SUNY Polytechnic Institute · AIX Research Group
 
 **Graduate Research Assistant (Remote)** · September 2025–May 2026
@@ -63,14 +82,28 @@ Business intelligence and data professional with more than a decade of experienc
 - Executed model and data-processing workflows across Vertex AI, Model Garden, Document AI, and Gemini model families.
 - Supported faculty and graduate researchers with environment onboarding, ADC authentication, and runtime troubleshooting, and documented repeatable setup procedures.
 - Developed a training guide for graduate researchers covering Gemini, Colab AI, and Google Cloud credit usage to support adoption of AI research tooling.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/hudson-map-company.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### Hudson Map Company
 
 **Logistics Manager** · March 2025–May 2026
 
 - Supported the build-out of freight-brokerage operations, including carrier onboarding and digital booking workflows.
 - Implemented Highway alongside FMCSA data and industry-monitoring tools to verify carrier identity and screen for freight fraud and identity theft.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/new-balance.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### New Balance Footwear
 
 **Business Analyst, Sourced Manufacturing (Remote)** · June 2022–March 2025
@@ -82,7 +115,14 @@ Business intelligence and data professional with more than a decade of experienc
 - Managed a global amortization reconciliation across factories in China, Indonesia, and Vietnam alongside U.S. and U.K. business teams, pulling supporting financial data from SAP and recovering $5.5 million in credit notes.
 - Built and maintained dashboards and detailed amortization reporting distributed monthly to 200–300 people across product and manufacturing teams.
 - Presented amortization status by product category on a recurring basis, surfacing financial exposure and outlining mitigation and resolution options.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<span class="org-monogram" aria-hidden="true">JW</span>
+::::
+:::: {.cv-entry-content}
 ### Independent Consulting · JWillson LLC
 
 **Analytics, E-commerce, and Market Research** · June 2018–August 2022
@@ -91,7 +131,15 @@ Business intelligence and data professional with more than a decade of experienc
 - Conducted market research for Evolv Climbing to inform product-line organization, positioning, and marketing.
 - Ran product-strategy interviews with professional skiers, snowboarders, and climbers.
 - Partnered with the founder of Montana Overlanding on expansion planning, acquiring three off-road and camping-equipped vehicles and renting them through the company.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos .logo-stack}
+<img src="assets/img/organizations/miyar-adventures.jpeg" alt="" class="org-logo org-logo-small">
+<img src="assets/img/organizations/crystal-mountain.jpeg" alt="" class="org-logo org-logo-small">
+::::
+:::: {.cv-entry-content}
 ### Miyar Adventures / Crystal Mountain Resort
 
 **Professional Alpine Guide, Instructor, and Retail Operations** · November 2016–April 2022
@@ -101,7 +149,14 @@ Business intelligence and data professional with more than a decade of experienc
 - Served as team lead on a Denali expedition with Explore Inspired, which managed a sponsorship funding several trips in exchange for writing, photography, and subject matter expertise on Rainier and Denali trips.
 - Collaborated with the store manager on retail layout, assembled equipment kits for guided-trip clients, and advised clients on gear selection with pre-trip equipment checks.
 - Managed daily retail operations and employee scheduling for the ski and snowboard demo shop at Crystal Mountain Resort, and instructed ski and snowboard lessons and backcountry tours.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/forrester.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### Forrester Research
 
 **Business Intelligence Analyst, Consulting and Data Products** · May 2015–November 2016
@@ -110,7 +165,16 @@ Business intelligence and data professional with more than a decade of experienc
 - Partnered with cross-functional teams to define key performance metrics and analyze data across business units, transforming Salesforce data into reporting used by business stakeholders.
 - Built and distributed recurring reports on bookings, revenue, capacity modeling, and product cycle time to support planning and strategic decision-making.
 - Improved reporting efficiency and accuracy through automation and the implementation of Tableau analytics, driving process-improvement initiatives across reporting workflows.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos .logo-stack}
+<img src="assets/img/organizations/boston-scientific.jpeg" alt="" class="org-logo org-logo-small">
+<img src="assets/img/organizations/reebok.jpeg" alt="" class="org-logo org-logo-small">
+<img src="assets/img/organizations/beacon-consulting.jpeg" alt="" class="org-logo org-logo-small">
+::::
+:::: {.cv-entry-content}
 ### Northeastern University Graduate Co-ops
 
 **Business Analysis and Process Improvement** · July 2013–May 2015
@@ -118,13 +182,22 @@ Business intelligence and data professional with more than a decade of experienc
 - **Boston Scientific, Process Improvement Analyst II:** Planned and estimated the global rollout of an OpenText Invoice Management System across 41 countries. Tracked project status, issues, and timelines across international operations, with supporting work in SAP.
 - **Reebok International, Graduate Finance and Sales Operations Intern:** Supported the U.S. finance and sales-operations team with reporting and analysis in SAP. Collected, manipulated, and uploaded point-of-sale data; tracked debits and credits for cost-center accuracy; and built expense schedules for operating-expenditure planning.
 - **Beacon Consulting Group (now part of Accenture), Intern Associate:** Developed process maps identifying weaknesses in client FP&A and trade-processing operations and supported client deliverables and business development.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/cool-gear.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### Cool Gear International · Plymouth, Massachusetts
 
 **Business Analyst** · December 2011–June 2013
 
 - Analyzed market and sales data to identify design and inventory trends shaping seasonal consumer-product programs.
 - Built and maintained recurring sales reporting for domestic and international accounts.
+::::
+:::::
 
 ## Selected Projects and Research
 
@@ -180,22 +253,43 @@ Business intelligence and data professional with more than a decade of experienc
 
 ## Education
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/suny-poly.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### SUNY Polytechnic Institute · Utica, New York
 
 **Master of Science in Data Science and Analytics** · Expected May 2027  
 Focus: Computer Science and Artificial Intelligence
 
 **Selected graduate coursework:** Statistical Inference; Regression and Analysis of Variance; Data Collection and Design of Experiments; Introduction to Machine Learning; Artificial Intelligence; Big Data Platforms and Analytics; Database Systems.
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/northeastern.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### Northeastern University · Boston, Massachusetts
 
 **Master of Science in Management** · April 2015  
 Focus: Project Management and Economics
+::::
+:::::
 
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/alfred-state.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
 ### Alfred State College · Alfred, New York
 
 **Bachelor of Business Administration** · May 2012  
 Focus: Technology Management
+::::
+:::::
 
 ## Awards
 
