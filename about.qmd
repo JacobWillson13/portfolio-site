@@ -1,5 +1,34 @@
 ---
-title: "about"
+title: "About"
+description: "Professional background and analytical approach of Jacob Willson."
 ---
 
-Placeholder.
+I am an advanced analytics professional and Applied AI Research Fellow with experience spanning business intelligence, operational analytics, market research, data science, and AI evaluation.
+
+I built my professional foundation through analytics work at New Balance and through research, consulting, and operational roles across multiple industries. That experience taught me to begin with the decision that needs to be made, understand how the underlying process produces the data, and communicate results in a form that people can use.
+
+## Current Focus
+
+My current work extends that foundation into NLP, retrieval-augmented generation, synthetic data, document intelligence, LLM evaluation, and AI infrastructure. I am particularly interested in evaluation design: defining appropriate comparisons, preserving run-level evidence, identifying failure modes, and separating promising results from claims the data cannot support.
+
+I am completing an M.S. in Data Science & Analytics in December 2026. My broader academic background includes graduate study in management and undergraduate study in technology management.
+
+## How I Work
+
+I approach analytics and applied AI as connected disciplines rather than separate tracks. The same habits that improve business intelligence—clear definitions, reliable data, appropriate comparisons, and decision-focused communication—also make machine-learning and LLM systems more useful and trustworthy.
+
+My portfolio emphasizes:
+
+- Reproducible analytical and experimental workflows
+- Practical interpretation of statistical and model results
+- Transparent limitations and evidence boundaries
+- Communication for both technical and non-technical audiences
+- Local and cloud infrastructure that supports reliable experimentation
+
+## Beyond the Work
+
+Before moving fully into analytics and technology, I worked as a mountaineering and rock-climbing guide. That experience continues to shape how I think about preparation, uncertainty, risk, and decision-making in complex environments.
+
+## Connect
+
+[GitHub](https://github.com/JacobWillson13) · [LinkedIn](https://www.linkedin.com/in/jacob-j-willson/) · [Portfolio home](index.qmd)
