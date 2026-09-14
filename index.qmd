@@ -6,35 +6,57 @@ page-layout: full
 
 :::::: {.hero}
 ::::: {.hero-inner}
-<p class="eyebrow">Advanced Analytics · Business Intelligence · Data Science · Applied AI</p>
+:::: {.hero-copy}
+<p class="eyebrow">Advanced analytics · Business intelligence · Applied AI</p>
 
 # Data-driven decisions. Carefully evaluated AI.
 
-I combine a professional background in business intelligence and operational analytics with current work in data science and applied AI. My focus is turning complex data, experiments, and model behavior into defensible findings and practical decisions.
+I combine more than a decade in business intelligence and operational analytics with current work in data science and applied AI. I turn complex data, experiments, and model behavior into defensible findings and practical decisions.
 
-[View selected projects](projects.qmd){.btn .btn-primary} [About me](about.qmd){.btn .btn-outline-dark}
+[View selected projects](projects.qmd){.btn .btn-primary} [View CV](cv.qmd){.btn .btn-outline-dark}
+::::
+
+<div class="signal-panel">
+  <p class="signal-heading">Selected evidence</p>
+  <div class="signal-grid">
+    <div class="signal-item"><strong>10+</strong><span>years across analytics and BI</span></div>
+    <div class="signal-item"><strong>500K</strong><span>freight trips analyzed</span></div>
+    <div class="signal-item"><strong>3,900</strong><span>controlled LLM evaluation runs</span></div>
+    <div class="signal-item"><strong>6,672</strong><span>RAG evaluation records</span></div>
+  </div>
+</div>
 :::::
 ::::::
 
 :::::: {.section-shell}
+:::: {.section-heading}
+<p class="eyebrow">Practice</p>
+
 ## What I do
 
 I work across the full analytical process: defining the question, preparing and validating data, designing experiments, evaluating models, interpreting results, and communicating what the evidence supports.
+::::
 
 ::::: {.practice-grid}
 ::: {.practice-item}
+<p class="practice-number">01</p>
+
 ### Analytics and decision support
 
 Business intelligence, statistical analysis, experimental design, operational metrics, segmentation, and clear communication for decision-makers.
 :::
 
 ::: {.practice-item}
+<p class="practice-number">02</p>
+
 ### Applied AI evaluation
 
 NLP, retrieval-augmented generation, synthetic data, document intelligence, and controlled evaluation of model quality, latency, and reliability.
 :::
 
 ::: {.practice-item}
+<p class="practice-number">03</p>
+
 ### AI systems and infrastructure
 
 Reproducible local and cloud environments for model experimentation, vector retrieval, observability, and GPU-enabled inference.
@@ -43,39 +65,84 @@ Reproducible local and cloud environments for model experimentation, vector retr
 ::::::
 
 :::::: {.section-shell}
-## Featured Work
+::: {.experience-bridge}
+<p class="eyebrow">Professional foundation</p>
 
-::::: {.project-grid}
+### Industry analytics before—and alongside—applied AI
+
+My experience spans business intelligence and operational analysis at New Balance and Forrester Research, consulting across multiple industries, and current applied-AI research.
+
+[Read about my background](about.qmd){.section-link}
+:::
+::::::
+
+:::::: {.section-shell .featured-section}
+:::: {.section-heading}
+<p class="eyebrow">Selected work</p>
+
+## Evidence, not just implementations
+
+Each project preserves its analytical design, retained results, limitations, and reproducible workflow for closer review.
+::::
+
+::::: {.project-grid .project-grid-home}
 ::: {.project-card}
-<p class="project-type">Advanced analytics</p>
+<p class="project-type">Advanced analytics · Decision science</p>
 
 ### Freight Cost & Sampling Analysis
 
-A 500,000-trip analysis combining sampling simulation, cost-driver analysis, confounding controls, and route segmentation to produce operational decision insights.
+A 500,000-trip study showing how sampling design, confounding controls, and route segmentation change the operational conclusions available from freight data.
+
+<div class="project-metric"><strong>0.991</strong><span>controlled load–cost correlation</span></div>
+
+<p class="project-tools">Python · Statistical analysis · Segmentation</p>
 
 [View repository →](https://github.com/JacobWillson13/freight-cost-analysis)
 :::
 
 ::: {.project-card}
-<p class="project-type">Research evaluation</p>
+<p class="project-type">Experimental design · LLM evaluation</p>
 
-### SCIO Ontology Validation
+### Gemma 4 Security-Advisory Evaluation
 
-An evidence-driven validation study combining literature analysis, LLM-assisted coding, embeddings, clustering, network analysis, topology, and structured review.
+A controlled local experiment measuring how model size, supplied evidence, reasoning configuration, and temperature affect accuracy, latency, and reliability.
 
-[View repository →](https://github.com/JacobWillson13/scio-eval)
+<div class="project-metric"><strong>3,900</strong><span>retained evaluation runs</span></div>
+
+<p class="project-tools">Python · R · Ollama · ANOVA</p>
+
+[View repository →](https://github.com/JacobWillson13/gemma4-eval)
 :::
 
 ::: {.project-card}
-<p class="project-type">Applied AI system</p>
+<p class="project-type">RAG · Information retrieval</p>
 
 ### DOME Handbook RAG
 
-A local RAG application and evaluation suite with 6,672 question-level results spanning retrieval strategies, embeddings, and language models.
+A local question-answering system paired with completed experiments comparing retrieval strategies, embedding models, and language models.
+
+<div class="project-metric"><strong>6,672</strong><span>question-level evaluation records</span></div>
+
+<p class="project-tools">LangChain · ChromaDB · BM25 · Ollama</p>
 
 [View repository →](https://github.com/JacobWillson13/dome-rag)
 :::
 :::::
 
-[Explore all selected projects](projects.qmd){.section-link}
+[Explore all selected projects](projects.qmd){.section-link .section-link-standalone}
+::::::
+
+:::::: {.section-shell .contact-section}
+::: {.contact-band}
+<div>
+  <p class="eyebrow">Connect</p>
+  <h2>Interested in working together?</h2>
+  <p>I am focused on advanced analytics, data science, and applied-AI opportunities where rigorous evaluation and practical decision support matter.</p>
+</div>
+
+<div class="contact-actions">
+  <a class="btn btn-primary" href="mailto:Jacob.Willson13@gmail.com">Email me</a>
+  <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/jacob-j-willson/">LinkedIn</a>
+</div>
+:::
 ::::::
