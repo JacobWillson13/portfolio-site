@@ -1,5 +1,4 @@
 ---
-title: false
 pagetitle: "Jacob Willson | Advanced Analytics, Data Science, and Applied AI"
 description: "Advanced analytics, business intelligence, data science, and applied AI portfolio."
 page-layout: full
