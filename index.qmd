@@ -17,13 +17,13 @@ I combine more than a decade in business intelligence and operational analytics 
 ::::
 
 <div class="signal-panel">
-  <p class="signal-heading">Selected evidence</p>
-  <div class="signal-grid">
-    <div class="signal-item"><strong>10+</strong><span>years across analytics and BI</span></div>
-    <div class="signal-item"><strong>500K</strong><span>freight trips analyzed</span></div>
-    <div class="signal-item"><strong>3,900</strong><span>controlled LLM evaluation runs</span></div>
-    <div class="signal-item"><strong>6,672</strong><span>RAG evaluation records</span></div>
-  </div>
+<p class="signal-heading">Selected evidence</p>
+<div class="signal-grid">
+<div class="signal-item"><strong>10+</strong><span>years across analytics and BI</span></div>
+<div class="signal-item"><strong>500K</strong><span>freight trips analyzed</span></div>
+<div class="signal-item"><strong>3,900</strong><span>controlled LLM evaluation runs</span></div>
+<div class="signal-item"><strong>6,672</strong><span>RAG evaluation records</span></div>
+</div>
 </div>
 :::::
 ::::::
