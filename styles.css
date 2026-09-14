@@ -482,21 +482,13 @@ main.content {
   box-shadow: var(--shadow);
 }
 
-.profile-panel dl,
-.profile-panel dd {
+.profile-panel dl {
   margin: 0;
 }
 
-.profile-panel dl > div {
-  padding: 0.9rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.profile-panel dl > div:last-child {
-  border-bottom: 0;
-}
-
 .profile-panel dt {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 750;
@@ -504,12 +496,21 @@ main.content {
   text-transform: uppercase;
 }
 
+.profile-panel dt:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
 .profile-panel dd {
-  margin-top: 0.25rem;
+  margin: 0.25rem 0 0.9rem;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.02rem;
   line-height: 1.4;
+}
+
+.profile-panel dd:last-child {
+  margin-bottom: 0;
 }
 
 .cv-page {
