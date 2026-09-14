@@ -2,10 +2,7 @@
 title: "Jacob J. Willson"
 subtitle: "Curriculum Vitae"
 description: "Curriculum vitae of Jacob J. Willson, spanning business intelligence, advanced analytics, data science, and applied AI research."
-toc: true
-toc-depth: 2
-toc-location: left
-toc-title: "Contents"
+toc: false
 anchor-sections: true
 link-external-newwindow: true
 ---
