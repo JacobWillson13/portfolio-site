@@ -3,11 +3,13 @@ title: "Selected Projects"
 description: "Selected advanced analytics, data science, and applied AI projects by Jacob Willson."
 ---
 
+::: {.page-lede}
 These projects show how I frame analytical questions, build reproducible workflows, evaluate evidence, and translate technical results into practical conclusions. Each repository includes methods, retained results, and documentation for closer review.
+:::
 
 ## Advanced Analytics, Experimentation, and Decision Science
 
-:::: {.project-grid}
+:::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 <p class="project-type">Business intelligence · Sampling · Segmentation</p>
 
@@ -15,7 +17,9 @@ These projects show how I frame analytical questions, build reproducible workflo
 
 Analyzed a 500,000-trip synthetic U.S. freight network using sampling simulation, route-level business intelligence, cost-driver analysis, confounding controls, and operational segmentation.
 
-The study shows why like-for-like comparisons matter: the raw load-cost relationship was nearly absent across the network but became strong after route, month, and hour were held constant.
+<div class="project-result"><span>Key finding</span><strong>Like-for-like controls increased the observed load–cost correlation from 0.030 to 0.991.</strong></div>
+
+<p class="project-tools">Python · pandas · Statistical analysis · Data visualization</p>
 
 [View repository →](https://github.com/JacobWillson13/freight-cost-analysis)
 :::
@@ -25,9 +29,11 @@ The study shows why like-for-like comparisons matter: the raw load-cost relation
 
 ### Gemma 4 Security-Advisory Evaluation
 
-Designed and analyzed a 3,900-run local experiment measuring how model size, supplied evidence, reasoning configuration, and temperature affect accuracy, latency, reliability, and deployment trade-offs.
+Designed and analyzed a controlled local experiment measuring how model size, supplied evidence, reasoning configuration, and temperature affect accuracy, latency, reliability, and deployment trade-offs.
 
-The retained results support reproducible analysis without rerunning inference and frame model selection as an operating decision rather than a leaderboard exercise.
+<div class="project-result"><span>Evidence base</span><strong>3,900 retained inference runs analyzed through question-blocked experimental methods.</strong></div>
+
+<p class="project-tools">Python · R · Ollama · Factorial design · ANOVA</p>
 
 [View repository →](https://github.com/JacobWillson13/gemma4-eval)
 :::
@@ -39,35 +45,41 @@ The retained results support reproducible analysis without rerunning inference a
 
 Compared seven synthetic time-series generation approaches across two UAV datasets using statistical fidelity and train-synthetic/test-real evaluation.
 
-The study found that useful predictive signal can survive generation, but performance depends on generation strategy, data volume, and preservation of multivariate structure.
+<div class="project-result"><span>Evaluation design</span><strong>Downstream utility was tested alongside fidelity across changing models, volumes, and generation strategies.</strong></div>
+
+<p class="project-tools">Python · PyTorch · GCP A100 · Time-series modeling</p>
 
 [View repository →](https://github.com/JacobWillson13/uav-pnt)
 :::
-::::
 
-## Applied AI and Information Systems
-
-:::: {.project-grid}
 ::: {.project-card}
 <p class="project-type">NLP · Ontology validation · Research methods</p>
 
 ### SCIO Ontology Validation
 
-Combined deductive literature validation, inductive recovery, LLM-assisted evidence coding, embeddings, clustering, network analysis, topology, and structured human review.
+Combined literature validation, LLM-assisted evidence coding, embeddings, clustering, network analysis, and structured human review to evaluate a socio-cognitive influence ontology.
 
-The work evaluates both the usefulness of individual analytical features and whether the proposed theoretical branches are recovered by empirical structure.
+<div class="project-result"><span>Research design</span><strong>Cluster solutions are tested against reference groupings and stability measures rather than accepted visually.</strong></div>
+
+<p class="project-tools">Python · Embeddings · HDBSCAN · NetworkX · Human review</p>
 
 [View repository →](https://github.com/JacobWillson13/scio-eval)
 :::
+::::
 
+## Applied AI and Information Systems
+
+:::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 <p class="project-type">RAG · Information retrieval · Evaluation</p>
 
 ### DOME Handbook RAG
 
-Built a local handbook question-answering application and two evaluation studies containing 6,672 question-level results across retrieval strategies, embedding choices, and language models.
+Built a local handbook question-answering application and two completed studies comparing retrieval strategies, embedding choices, and language models.
 
-The project connects an interactive Gradio prototype with retained evaluation data, deterministic summaries, and documented study boundaries.
+<div class="project-result"><span>Evidence base</span><strong>6,672 question-level records connect an interactive prototype with reproducible evaluation.</strong></div>
+
+<p class="project-tools">LangChain · ChromaDB · BM25 · Ollama · Gradio</p>
 
 [View repository →](https://github.com/JacobWillson13/dome-rag)
 :::
@@ -79,8 +91,44 @@ The project connects an interactive Gradio prototype with retained evaluation da
 
 Developed a reproducible benchmark comparing citation-extraction workflows across PDF, text, vision, targeted-context, hybrid, and specialist-parser approaches.
 
-The repository preserves a 705-row result snapshot, representative evidence chains, shared schemas, scoring tools, and validation checks.
+<div class="project-result"><span>Evidence base</span><strong>705 recorded workflow results across 11 executed variants under a shared schema and scoring framework.</strong></div>
+
+<p class="project-tools">Python · PDF parsing · LLM evaluation · Schema validation</p>
 
 [View repository →](https://github.com/JacobWillson13/citebench)
 :::
+
+::: {.project-card}
+<p class="project-type">Agentic systems · Quality gates · Reproducibility</p>
+
+### Agentic Development Workflow
+
+Developed a human-governed framework for planning and executing analytics, data-science, and applied-AI projects with coding agents.
+
+<div class="project-result"><span>Operating model</span><strong>Defined project intake, agent roles, decision trees, quality gates, and approval points to keep agent-assisted work auditable.</strong></div>
+
+<p class="project-tools">AI agents · Human in the loop · Project planning · Documentation</p>
+
+[View repository →](https://github.com/JacobWillson13/agentic-dev-workflow)
+:::
+
+::: {.project-card}
+<p class="project-type">Edge AI · Research proposal · Systems thinking</p>
+
+### Wasted Momentum: Vehicle-Powered Edge AI
+
+Developed a research proposal for powering distributed AI inference from surplus vehicle electrical output, supported by a literature review, white paper, and pitch deck.
+
+<div class="project-result"><span>Recognition</span><strong>First-place entry in the 2025 SUNY Polytechnic Institute research pitch competition.</strong></div>
+
+<p class="project-tools">Edge AI · Infrastructure · Research synthesis · Technical communication</p>
+
+[View proposal summary →](cv.qmd#research-and-proposals)
+:::
 ::::
+
+::: {.project-note}
+### Why the repositories matter
+
+The project summaries are intentionally concise. The linked repositories retain the code, methods, results, documentation, and evidence boundaries needed for a technical review.
+:::

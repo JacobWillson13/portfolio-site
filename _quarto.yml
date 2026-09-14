@@ -11,6 +11,8 @@ website:
   title: "Jacob Willson"
   site-url: "https://jacobwillson.com"
   description: "Portfolio of Jacob Willson: advanced analytics, business intelligence, data science, and applied AI."
+  favicon: assets/img/favicon.svg
+  open-graph: true
   search: false
   navbar:
     background: white
@@ -25,10 +27,28 @@ website:
       - href: cv.qmd
         text: CV
     right:
-      - href: "https://github.com/JacobWillson13"
-        text: GitHub
-      - href: "https://www.linkedin.com/in/jacob-j-willson/"
-        text: LinkedIn
+      - icon: github
+        href: "https://github.com/JacobWillson13"
+        aria-label: GitHub
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/jacob-j-willson/"
+        aria-label: LinkedIn
+      - text: Contact
+        href: "mailto:Jacob.Willson13@gmail.com"
+  page-footer:
+    border: true
+    left: "© 2026 Jacob Willson"
+    center: "Advanced analytics · Data science · Applied AI"
+    right:
+      - icon: envelope
+        href: "mailto:Jacob.Willson13@gmail.com"
+        aria-label: Email
+      - icon: github
+        href: "https://github.com/JacobWillson13"
+        aria-label: GitHub
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/jacob-j-willson/"
+        aria-label: LinkedIn
 
 format:
   html:
