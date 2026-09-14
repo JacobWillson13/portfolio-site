@@ -51,11 +51,7 @@ Compared seven synthetic time-series generation approaches across two UAV datase
 
 [View repository →](https://github.com/JacobWillson13/uav-pnt)
 :::
-::::
 
-## Applied AI and Information Systems
-
-:::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 <p class="project-type">NLP · Ontology validation · Research methods</p>
 
@@ -69,7 +65,11 @@ Combined literature validation, LLM-assisted evidence coding, embeddings, cluste
 
 [View repository →](https://github.com/JacobWillson13/scio-eval)
 :::
+::::
 
+## Applied AI and Information Systems
+
+:::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 <p class="project-type">RAG · Information retrieval · Evaluation</p>
 
@@ -96,6 +96,34 @@ Developed a reproducible benchmark comparing citation-extraction workflows acros
 <p class="project-tools">Python · PDF parsing · LLM evaluation · Schema validation</p>
 
 [View repository →](https://github.com/JacobWillson13/citebench)
+:::
+
+::: {.project-card}
+<p class="project-type">Agentic systems · Quality gates · Reproducibility</p>
+
+### Agentic Development Workflow
+
+Developed a human-governed framework for planning and executing analytics, data-science, and applied-AI projects with coding agents.
+
+<div class="project-result"><span>Operating model</span><strong>Defined project intake, agent roles, decision trees, quality gates, and approval points to keep agent-assisted work auditable.</strong></div>
+
+<p class="project-tools">AI agents · Human in the loop · Project planning · Documentation</p>
+
+[View repository →](https://github.com/JacobWillson13/agentic-dev-workflow)
+:::
+
+::: {.project-card}
+<p class="project-type">Edge AI · Research proposal · Systems thinking</p>
+
+### Wasted Momentum: Vehicle-Powered Edge AI
+
+Developed a research proposal for powering distributed AI inference from surplus vehicle electrical output, supported by a literature review, white paper, and pitch deck.
+
+<div class="project-result"><span>Recognition</span><strong>First-place entry in the 2025 SUNY Polytechnic Institute research pitch competition.</strong></div>
+
+<p class="project-tools">Edge AI · Infrastructure · Research synthesis · Technical communication</p>
+
+[View proposal summary →](cv.qmd#research-and-proposals)
 :::
 ::::
 
