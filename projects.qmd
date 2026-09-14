@@ -1,0 +1,86 @@
+---
+title: "Selected Projects"
+description: "Selected advanced analytics, data science, and applied AI projects by Jacob Willson."
+---
+
+These projects show how I frame analytical questions, build reproducible workflows, evaluate evidence, and translate technical results into practical conclusions. Each repository includes methods, retained results, and documentation for closer review.
+
+## Advanced Analytics, Experimentation, and Decision Science
+
+:::: {.project-grid}
+::: {.project-card}
+<p class="project-type">Business intelligence · Sampling · Segmentation</p>
+
+### Freight Cost & Sampling Analysis
+
+Analyzed a 500,000-trip synthetic U.S. freight network using sampling simulation, route-level business intelligence, cost-driver analysis, confounding controls, and operational segmentation.
+
+The study shows why like-for-like comparisons matter: the raw load-cost relationship was nearly absent across the network but became strong after route, month, and hour were held constant.
+
+[View repository →](https://github.com/JacobWillson13/freight-cost-analysis)
+:::
+
+::: {.project-card}
+<p class="project-type">Experimental design · LLM evaluation · Deployment</p>
+
+### Gemma 4 Security-Advisory Evaluation
+
+Designed and analyzed a 3,900-run local experiment measuring how model size, supplied evidence, reasoning configuration, and temperature affect accuracy, latency, reliability, and deployment trade-offs.
+
+The retained results support reproducible analysis without rerunning inference and frame model selection as an operating decision rather than a leaderboard exercise.
+
+[View repository →](https://github.com/JacobWillson13/gemma4-eval)
+:::
+
+::: {.project-card}
+<p class="project-type">Synthetic data · Time series · Predictive evaluation</p>
+
+### Synthetic UAV Telemetry Evaluation
+
+Compared seven synthetic time-series generation approaches across two UAV datasets using statistical fidelity and train-synthetic/test-real evaluation.
+
+The study found that useful predictive signal can survive generation, but performance depends on generation strategy, data volume, and preservation of multivariate structure.
+
+[View repository →](https://github.com/JacobWillson13/uav-pnt)
+:::
+::::
+
+## Applied AI and Information Systems
+
+:::: {.project-grid}
+::: {.project-card}
+<p class="project-type">NLP · Ontology validation · Research methods</p>
+
+### SCIO Ontology Validation
+
+Combined deductive literature validation, inductive recovery, LLM-assisted evidence coding, embeddings, clustering, network analysis, topology, and structured human review.
+
+The work evaluates both the usefulness of individual analytical features and whether the proposed theoretical branches are recovered by empirical structure.
+
+[View repository →](https://github.com/JacobWillson13/scio-eval)
+:::
+
+::: {.project-card}
+<p class="project-type">RAG · Information retrieval · Evaluation</p>
+
+### DOME Handbook RAG
+
+Built a local handbook question-answering application and two evaluation studies containing 6,672 question-level results across retrieval strategies, embedding choices, and language models.
+
+The project connects an interactive Gradio prototype with retained evaluation data, deterministic summaries, and documented study boundaries.
+
+[View repository →](https://github.com/JacobWillson13/dome-rag)
+:::
+
+::: {.project-card}
+<p class="project-type">Document intelligence · Benchmarking · Reproducibility</p>
+
+### CiteBench
+
+Developed a reproducible benchmark comparing citation-extraction workflows across PDF, text, vision, targeted-context, hybrid, and specialist-parser approaches.
+
+The repository preserves a 705-row result snapshot, representative evidence chains, shared schemas, scoring tools, and validation checks.
+
+[View repository →](https://github.com/JacobWillson13/citebench)
+:::
+::::
