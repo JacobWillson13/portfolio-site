@@ -2,32 +2,38 @@ project:
   type: website
   output-dir: _site
   render:
-    - "*.qmd"
-    - "projects/*.qmd"
-    - "dashboards/*.qmd"
+    - index.qmd
+    - projects.qmd
+    - about.qmd
 
 website:
   title: "Jacob Willson"
   site-url: "https://jacobwillson.com"
+  description: "Portfolio of Jacob Willson: advanced analytics, business intelligence, data science, and applied AI."
+  search: false
   navbar:
+    background: white
+    foreground: dark
     left:
       - href: index.qmd
         text: Home
-      - href: research.qmd
-        text: Research
-      - href: analytics.qmd
-        text: Analytics
+      - href: projects.qmd
+        text: Projects
       - href: about.qmd
         text: About
-      - href: cv.qmd
-        text: CV
+    right:
+      - href: "https://github.com/JacobWillson13"
+        text: GitHub
+      - href: "https://www.linkedin.com/in/jacob-j-willson/"
+        text: LinkedIn
 
 format:
   html:
     theme: cosmo
     css: styles.css
-
-
+    toc: false
+    link-external-newwindow: true
+    smooth-scroll: true
 
 execute:
   freeze: auto

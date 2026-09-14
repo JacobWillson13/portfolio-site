@@ -1,1 +1,223 @@
-/* css styles */
+:root {
+  --ink: #111111;
+  --muted: #5f5f5f;
+  --line: #d8d8d8;
+  --soft: #f6f6f3;
+  --paper: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+
+h1 {
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  margin-top: 2.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--ink);
+  text-decoration-color: #8a8a8a;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+
+.navbar {
+  background: var(--paper) !important;
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+}
+
+.navbar .nav-link {
+  color: var(--ink) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+main.content {
+  max-width: 980px;
+}
+
+.hero {
+  margin-top: -1rem;
+  padding: 6rem 1.5rem 5.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-inner,
+.section-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 0.5rem 0 1.5rem;
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  line-height: 1.02;
+}
+
+.eyebrow,
+.project-type {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero > .hero-inner > p:not(.eyebrow) {
+  max-width: 790px;
+  margin-bottom: 2rem;
+  color: #303030;
+  font-size: 1.3rem;
+}
+
+.section-shell {
+  padding: 3.75rem 1.5rem 0;
+}
+
+.practice-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.25rem;
+}
+
+.practice-item,
+.project-card {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.practice-item {
+  background: var(--soft);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card > p:last-child {
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.project-card a,
+.section-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.btn {
+  margin: 0 0.5rem 0.5rem 0;
+  border-radius: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.btn-primary {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: #333333;
+  background: #333333;
+  color: var(--paper);
+}
+
+.btn-outline-dark {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.quarto-title-block .title {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .practice-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 12vw, 4.4rem);
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 3.25rem 1rem 3.5rem;
+  }
+
+  .section-shell {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .hero > .hero-inner > p:not(.eyebrow) {
+    font-size: 1.1rem;
+  }
+}
