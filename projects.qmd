@@ -7,9 +7,23 @@ description: "Selected advanced analytics, data science, and applied AI projects
 These projects show how I frame analytical questions, build reproducible workflows, evaluate evidence, and translate technical results into practical conclusions. Each repository includes methods, retained results, and documentation for closer review.
 :::
 
-## Advanced Analytics, Experimentation, and Decision Science
+## Analytics Engineering and Business Intelligence
 
 :::: {.project-grid .project-grid-wide}
+::: {.project-card}
+<p class="project-type">Analytics engineering · Financial data · Reconciliation</p>
+
+### Seats-to-Cash
+
+Built a dbt and Snowflake finance stack on synthetic Orb, Stripe, and Salesforce data that separates ARR expansion from repricing, reconciles billings, revenue, deferred revenue, and cash, and syncs account signals to Salesforce via Hightouch.
+
+<div class="project-result"><span>Key finding</span><strong>15.7% of 2026 ARR growth was repricing rather than expansion, with every MRR and revenue figure matching the answer key to the cent.</strong></div>
+
+<p class="project-tools">dbt · Snowflake · DuckDB · Hightouch · Streamlit · LookML</p>
+
+[View repository →](https://github.com/JacobWillson13/seats-to-cash)
+:::
+
 ::: {.project-card}
 <p class="project-type">Business intelligence · Sampling · Segmentation</p>
 
@@ -23,7 +37,11 @@ Analyzed a 500,000-trip synthetic U.S. freight network using sampling simulation
 
 [View repository →](https://github.com/JacobWillson13/freight-cost-analysis)
 :::
+::::
 
+## Experimentation and Decision Science
+
+:::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 <p class="project-type">Experimental design · LLM evaluation · Deployment</p>
 

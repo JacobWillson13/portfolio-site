@@ -254,9 +254,12 @@ main.content {
 }
 
 .practice-grid,
-.project-grid-home,
 .principles-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-grid-home {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-grid-wide {
