@@ -9,25 +9,27 @@ link-external-newwindow: true
 
 :::: {.cv-page}
 
-<p class="cv-contact">Rome, New York · <a href="mailto:Jacob.Willson13@gmail.com">Jacob.Willson13@gmail.com</a> · <a href="https://github.com/JacobWillson13">GitHub</a> · <a href="https://www.linkedin.com/in/jacob-j-willson/">LinkedIn</a></p>
+<p class="cv-contact">Clinton, New York · <a href="mailto:Jacob.Willson13@gmail.com">Jacob.Willson13@gmail.com</a> · <a href="https://github.com/JacobWillson13">GitHub</a> · <a href="https://www.linkedin.com/in/jacob-j-willson/">LinkedIn</a></p>
 
 ## Professional Summary
 
-Business intelligence and data professional with more than a decade of experience turning operational, product, and financial data into reporting, dashboards, and decision support across global manufacturing, consulting, and research organizations. Now working in applied machine learning and AI research, building retrieval and evaluation pipelines, designed experiments, and clustering and classification models in Python, SQL, and R across local GPU and cloud environments. My work connects two sides of the same problem: making data legible to the people who act on it and building reliable systems that produce it.
+Data and analytics professional with over a decade of experience in business intelligence, financial reporting, and process improvement. Builds SQL and dbt data models and Python workflows that replace manual processes and reconcile data across systems. Currently an AI research fellow building data pipelines, on-premises GPU inference infrastructure, and evaluation frameworks for machine learning and large language models. Works closely with business stakeholders and leadership to understand complex processes and help teams adopt new tools. Completing an M.S. in Data Science. The work connects two sides of the same problem: making data legible to the people who act on it and building reliable systems that produce it.
 
 ## Technical Skills
 
-**Programming and data manipulation:** Python (pandas, NumPy, SciPy), SQL, R (tidyverse), Bash.
+**Programming and data manipulation:** SQL, Python (pandas, NumPy, SciPy, PySpark, scikit-learn, Pydantic, matplotlib), R (tidyverse), Bash.
 
 **Machine learning and statistics:** scikit-learn, PyTorch, sentence-transformers, HDBSCAN, UMAP, NetworkX; regression, ANOVA, factorial experimental design, statistical inference, sampling design, clustering and community detection, classification, ensemble methods, and deep learning.
 
 **LLM and retrieval systems:** Ollama, vLLM, LangChain, LangGraph, ChromaDB, Qdrant, BM25 and hybrid retrieval, retrieval-augmented generation, LLM-based extraction and scoring, prompt versioning, and evaluation-harness design.
 
-**Data engineering and reproducibility:** MLflow, PostgreSQL, idempotent batch pipelines, JSON Schema and Pydantic validation, PDF parsing (PyMuPDF, pdfplumber, pdfminer), pytest, Git, and GitHub.
+**Data engineering and analytics engineering:** dbt, Snowflake, Databricks, SQL views and reporting tables, PostgreSQL, DuckDB, SQLite, Qdrant, Hightouch, MLflow, idempotent batch pipelines, JSON Schema and Pydantic validation, and PDF parsing (PyMuPDF, pdfplumber, pdfminer).
 
-**Business intelligence and visualization:** Power BI, Tableau, TIBCO Spotfire, Databricks, Snowflake, Excel, matplotlib, seaborn, and Quarto.
+**Business intelligence and visualization:** Power BI, Tableau, TIBCO Spotfire, Streamlit, LookML, Excel and Excel macros, matplotlib, seaborn, and Quarto.
 
-**Infrastructure and cloud:** Google Cloud (Vertex AI, Model Garden, Document AI, ADC authentication, GPU instances), NVIDIA CUDA and GPU computing, NVIDIA DGX Spark, Docker and Docker Compose, Linux, Proxmox VE, Prometheus, Grafana, and Tailscale.
+**Development tools:** Git, GitHub, GitHub Actions, pytest, Jupyter, VS Code, DBeaver, Cursor, and Claude Code.
+
+**Infrastructure and cloud:** Google Cloud (Compute Engine VMs, Cloud Storage, Vertex AI, Model Garden, Document AI, RAG Engine, Gemini, gcloud CLI, ADC authentication, GPU instances), Azure Database for PostgreSQL, NVIDIA CUDA and GPU computing, NVIDIA DGX Spark, Docker and Docker Compose, Linux servers (Ubuntu), Proxmox VE, Prometheus, Grafana, and Tailscale/MagicDNS.
 
 **Enterprise systems:** SAP, Flex PLM, Salesforce, SharePoint, OpenText Invoice Management, Shopify, HubSpot, and EDI and POS systems.
 
@@ -42,14 +44,14 @@ Business intelligence and data professional with more than a decade of experienc
 
 **AI Research Fellow** · May 2026–Present
 
-- Built an automated research pipeline in Python covering corpus acquisition from OpenAlex and Semantic Scholar, PDF parsing, and LLM-based feature extraction across roughly 5,000 research papers using locally hosted and frontier models.
-- Implemented idempotent batch execution and JSON Schema validation so long-running GPU jobs resumed cleanly without silent failures or duplicated work.
-- Benchmarked document-processing approaches head to head, comparing Python PDF-parsing libraries with LLM-based extraction on accuracy, segmentation quality, hallucination rate, and cost; the results established pipeline defaults.
-- Applied embedding, clustering, and network-analysis methods to evaluate and refine a taxonomy of socio-cognitive influence techniques as they relate to institutional trust.
-- Designed experiments measuring how data attributes and embedding configurations affected clustering results, scoring agreement against reference categories and stability across repeated runs.
-- Developed a reusable agentic-development methodology defining project intake, agent roles, workflow decision trees, LLM skill files, and quality gates.
-- Configured a two-node NVIDIA DGX Spark cluster and benchmarked LLM inference configurations for throughput and latency.
-- Built a reproducible development environment on DGX Spark hardware for incoming interns and contractors, automating the provisioning of Open WebUI, Tailscale, VS Code, and coding agents to mirror on-premises servers.
+- Built a reusable Python pipeline to acquire roughly 5,000 research papers from OpenAlex and Semantic Scholar, parse them, and extract structured evidence with LLMs, supporting literature-review automation and institutional trust research.
+- Benchmarked Python PDF-parsing libraries against LLM-based extraction on accuracy, segmentation quality, hallucination rate, and cost; the results set the pipeline's defaults.
+- Built reproducible ML and LLM evaluation workflows on SQLite, DuckDB, and PostgreSQL, with Qdrant for vector search, Pydantic schema validation, and resumable batch processing across multi-million-row experiment datasets.
+- Configured a two-node NVIDIA DGX Spark cluster for on-premises edge AI inference, benchmarking tensor- and pipeline-parallel vLLM serving of open-weight LLMs across concurrency levels to identify the highest-throughput configurations.
+- Set up a standardized development environment on DGX Spark hardware for incoming interns and contractors, automating the provisioning of Open WebUI, Tailscale, VS Code, and coding agents to mirror on-premises servers.
+- Designed and analyzed experiments in Python and R, tracking configurations in MLflow and scoring clustering quality, stability, and agreement against reference categories.
+- Applied natural language processing, embeddings, clustering, and network analysis to evaluate and refine a computational taxonomy of psychological influence and propaganda techniques affecting institutional trust.
+- Developed an agentic-development methodology for the team, defining project intake, agent roles, workflow decision trees, LLM skill files, and quality gates.
 ::::
 :::::
 
@@ -62,10 +64,9 @@ Business intelligence and data professional with more than a decade of experienc
 
 **AI Deployment Consultant (Volunteer)** · April 2026–Present
 
-- Led information-gathering sessions with nonprofit leadership and staff to understand operational needs, then designed training around the findings.
-- Deployed Google Gemini and integrated it with the organization's Gmail, Calendar, and Google Drive for daily staff use.
-- Established multi-user Anthropic access supporting grant writing and organizational project work.
-- Trained all five full-time staff members, including leadership, on day-to-day use and data-handling and privacy practices for client information.
+- Ran needs-assessment sessions with nonprofit leadership to identify where AI could remove repetitive administrative work.
+- Deployed Gemini across Gmail, Calendar, and Drive and multi-user Claude access; trained the full five-person staff and wrote guidelines for handling client information with AI tools.
+- Set up Claude for grant writing and organizational project work, and Gemini for daily scheduling, email, and document tasks.
 ::::
 :::::
 
@@ -76,12 +77,14 @@ Business intelligence and data professional with more than a decade of experienc
 :::: {.cv-entry-content}
 ### SUNY Polytechnic Institute · AIX Research Group
 
-**Graduate Research Assistant (Remote)** · September 2025–May 2026
+**AI Research Assistant** · September 2025–May 2026
 
-- Configured Google Cloud AI and machine-learning environments for two research teams: one studying retrieval-augmented generation and one studying synthetic positioning, navigation, and timing data.
-- Executed model and data-processing workflows across Vertex AI, Model Garden, Document AI, and Gemini model families.
+- Benchmarked RAG configurations with a research team, comparing retrieval strategies, embedding models, and language models.
+- Developed a RAG chatbot in collaboration with a partner university in Nigeria, evaluating local language and embedding models for operation on an 8 GB GPU.
+- Evaluated seven approaches to generating synthetic UAV telemetry using statistical fidelity measures and train-synthetic/test-real testing to assess downstream model performance.
+- Built and maintained the Google Cloud AI/ML environments supporting both research teams, including GPU workloads across Vertex AI, Model Garden, Document AI, and Gemini.
 - Supported faculty and graduate researchers with environment onboarding, ADC authentication, and runtime troubleshooting, and documented repeatable setup procedures.
-- Developed a training guide for graduate researchers covering Gemini, Colab AI, and Google Cloud credit usage to support adoption of AI research tooling.
+- Developed a Google AI and Google Cloud guide for graduate researchers covering Gemini, Colab AI, and credit usage; used by more than 30 researchers and interns, it became the source document for the [Internet Menace academic track](https://www.internetmenace.com/academic), a nine-unit curriculum built with SUNY Polytechnic Institute students.
 ::::
 :::::
 
@@ -92,10 +95,11 @@ Business intelligence and data professional with more than a decade of experienc
 :::: {.cv-entry-content}
 ### Hudson Map Company
 
-**Logistics Manager** · March 2025–May 2026
+**Founding Operations Manager** · May 2025–April 2026
 
-- Supported the build-out of freight-brokerage operations, including carrier onboarding and digital booking workflows.
-- Implemented Highway alongside FMCSA data and industry-monitoring tools to verify carrier identity and screen for freight fraud and identity theft.
+- Co-developed prototypes for an agentic AI freight broker, using LangChain and LangGraph to extract and standardize load details from emails, generate quotes, and match carriers through Gmail and Highway APIs.
+- Helped build out freight brokerage operations, including carrier onboarding, digital booking workflows, and daily logistics coordination.
+- Implemented Highway alongside FMCSA data and monitoring tools to verify carrier identity and reduce exposure to freight fraud.
 ::::
 :::::
 
@@ -108,13 +112,14 @@ Business intelligence and data professional with more than a decade of experienc
 
 **Business Analyst, Sourced Manufacturing (Remote)** · June 2022–March 2025
 
-- Analyzed product and demand data across 500 to 1,000 footwear style-color combinations daily using SQL and TIBCO Spotfire.
-- Developed demand estimates with project managers that drove mold and tooling acquisition timing and factory-capacity decisions, determining which styles received tooling capacity.
-- Led the mold and tooling workstream within a broader transformation of outsourced-manufacturing data, moving initialization, tracking, and amortization from thousands of spreadsheets into SharePoint, Power BI, and Flex PLM using Python.
-- Served as the business subject-matter expert during PLM onboarding, partnering with the Snowflake team on product-data onboarding and then using the system as a primary user.
-- Managed a global amortization reconciliation across factories in China, Indonesia, and Vietnam alongside U.S. and U.K. business teams, pulling supporting financial data from SAP and recovering $5.5 million in credit notes.
-- Built and maintained dashboards and detailed amortization reporting distributed monthly to 200–300 people across product and manufacturing teams.
-- Presented amortization status by product category on a recurring basis, surfacing financial exposure and outlining mitigation and resolution options.
+- Led the mold and tooling workstream of a manufacturing data transformation, standardizing thousands of spreadsheets with Excel macros and consolidating data with Python and SQL for centralized reporting.
+- Migrated tooling initialization, tracking, and amortization records into SharePoint, Power BI, and Flex PLM, replacing spreadsheet-based processes.
+- Managed a multiyear amortization reconciliation across more than ten factories in China, Indonesia, and Vietnam, reviewing roughly a decade of records and recovering $5.5 million in credit notes for overpayments.
+- Coordinated the reconciliation with U.S. and U.K. business teams, pulling supporting financial data from SAP.
+- Analyzed 500–1,000 footwear style-color combinations daily and built Power BI and Spotfire reporting for roughly 200 stakeholders, presenting category-level financial exposure and resolution options.
+- Developed demand estimates with product and project managers to guide tooling investment and factory capacity decisions.
+- Served as the business subject-matter expert during Flex PLM onboarding and then used the system as a primary user.
+- Worked with the Snowflake implementation team to bring current and archived PLM data onto one platform, feeding Power BI dashboards and Power Automate workflows.
 ::::
 :::::
 
@@ -125,11 +130,10 @@ Business intelligence and data professional with more than a decade of experienc
 :::: {.cv-entry-content}
 ### Independent Consulting · JWillson LLC
 
-**Analytics, E-commerce, and Market Research** · June 2018–August 2022
+**Analytics, E-commerce, and Market Research** · June 2018–September 2022
 
-- Built websites and Shopify e-commerce platforms for small businesses, incorporating inventory-management and order-tracking functionality.
-- Conducted market research for Evolv Climbing to inform product-line organization, positioning, and marketing.
-- Ran product-strategy interviews with professional skiers, snowboarders, and climbers.
+- Built Shopify sites for small businesses, configuring inventory and order workflows and supporting reporting and order management.
+- Conducted market research and product-strategy interviews with professional skiers, snowboarders, and climbers for Evolv Climbing, informing product-line organization, positioning, and marketing.
 - Partnered with the founder of Montana Overlanding on expansion planning, acquiring three off-road and camping-equipped vehicles and renting them through the company.
 ::::
 :::::
@@ -146,9 +150,9 @@ Business intelligence and data professional with more than a decade of experienc
 
 - Guided multi-day mountaineering trips and taught glacier travel and rescue on Mount Rainier and Mount Baker, running 10 to 15 guided trips per season.
 - Led Denali preparation and crevasse rescue clinics teaching technical skills for expedition climbing.
-- Served as team lead on a Denali expedition with Explore Inspired, which managed a sponsorship funding several trips in exchange for writing, photography, and subject matter expertise on Rainier and Denali trips.
-- Collaborated with the store manager on retail layout, assembled equipment kits for guided-trip clients, and advised clients on gear selection with pre-trip equipment checks.
-- Managed daily retail operations and employee scheduling for the ski and snowboard demo shop at Crystal Mountain Resort, and instructed ski and snowboard lessons and backcountry tours.
+- Served as team lead on a Denali expedition with Explore Inspired, through a sponsorship that funded several trips in exchange for my writing, photography, and subject-matter expertise on Rainier and Denali.
+- Worked in Miyar's outdoor retail shop, collaborating with the store manager on retail layout, assembling equipment kits for guided-trip clients, and advising clients on gear selection with pre-trip equipment checks.
+- Managed daily retail operations and employee scheduling for Crystal Mountain's ski and snowboard demo shop during three winter seasons, and instructed ski and snowboard lessons and guided backcountry ski and snowshoe tours.
 ::::
 :::::
 
@@ -159,12 +163,12 @@ Business intelligence and data professional with more than a decade of experienc
 :::: {.cv-entry-content}
 ### Forrester Research
 
-**Business Intelligence Analyst, Consulting and Data Products** · May 2015–November 2016
+**Business Intelligence Analyst** · August 2015–November 2016
 
-- Presented monthly business-performance reporting to the CEO and executive leadership team.
-- Partnered with cross-functional teams to define key performance metrics and analyze data across business units, transforming Salesforce data into reporting used by business stakeholders.
-- Built and distributed recurring reports on bookings, revenue, capacity modeling, and product cycle time to support planning and strategic decision-making.
-- Improved reporting efficiency and accuracy through automation and the implementation of Tableau analytics, driving process-improvement initiatives across reporting workflows.
+- Defined cross-functional KPIs and added Salesforce fields to distinguish products bundled into commercial accounts, improving revenue attribution and reporting on account growth.
+- Analyzed performance across business units, turning Salesforce data into reporting for business stakeholders.
+- Implemented Tableau and automated recurring reporting on bookings, revenue, capacity, and product cycle time to support planning decisions.
+- Presented monthly operational and financial performance to the CEO and executive leadership team.
 ::::
 :::::
 
@@ -177,7 +181,7 @@ Business intelligence and data professional with more than a decade of experienc
 :::: {.cv-entry-content}
 ### Northeastern University Graduate Co-ops
 
-**Business Analysis and Process Improvement** · July 2013–May 2015
+**Business Analysis and Process Improvement** · December 2013–July 2015
 
 - **Boston Scientific, Process Improvement Analyst II:** Planned and estimated the global rollout of an OpenText Invoice Management System across 41 countries. Tracked project status, issues, and timelines across international operations, with supporting work in SAP.
 - **Reebok International, Graduate Finance and Sales Operations Intern:** Supported the U.S. finance and sales-operations team with reporting and analysis in SAP. Collected, manipulated, and uploaded point-of-sale data; tracked debits and credits for cost-center accuracy; and built expense schedules for operating-expenditure planning.
@@ -192,14 +196,19 @@ Business intelligence and data professional with more than a decade of experienc
 :::: {.cv-entry-content}
 ### Cool Gear International · Plymouth, Massachusetts
 
-**Business Analyst** · December 2011–June 2013
+**Business Analyst** · December 2011–July 2013
 
-- Analyzed market and sales data to identify design and inventory trends shaping seasonal consumer-product programs.
-- Built and maintained recurring sales reporting for domestic and international accounts.
+- Analyzed market, sales, and POS data across domestic and international accounts, producing forecasting and inventory analysis for seasonal product programs.
+- Identified product design trends to inform upcoming seasonal programs.
+- Built and maintained recurring account-level sales reporting.
 ::::
 :::::
 
 ## Selected Projects and Research
+
+### Analytics Engineering and Financial Data
+
+**[Seats-to-Cash: SaaS Finance Data Stack](https://github.com/JacobWillson13/seats-to-cash).** A dbt and Snowflake finance stack on synthetic Orb, Stripe, and Salesforce data that separates ARR expansion from repricing, reconciles billings, revenue, deferred revenue, and cash, and syncs account signals to Salesforce via Hightouch. Every MRR and revenue figure matches a generated answer key to the cent, six planted data defects are handled in staging, and month-end closes are immutable, with late-arriving rows surfaced as traced restatements.
 
 ### LLM Evaluation and Benchmarking
 
@@ -229,21 +238,11 @@ Business intelligence and data professional with more than a decade of experienc
 
 **Wasted Momentum: Vehicle-Powered Edge AI.** A research proposal for powering distributed AI inference from surplus vehicle electrical output, developed from a first-place entry in the SUNY Polytechnic Institute research pitch competition. The proposal includes a pitch deck, companion white paper, and literature review; it remains at the proposal stage, with no pilot measurements claimed.
 
-## Teaching and Training
-
-- Wrote a Google AI and Google Cloud specifications guide for graduate researchers covering tooling capabilities, Colab AI, and credit usage. Used by more than 30 researchers and interns, it is credited as the source document for the [Internet Menace academic track](https://www.internetmenace.com/academic), a nine-unit companion curriculum built with SUNY Polytechnic Institute students.
-- Supported faculty and graduate researchers with cloud-environment onboarding, authentication, and workflow troubleshooting, and documented repeatable procedures for reuse.
-- Led needs-assessment and training sessions for nonprofit staff and leadership at the Midtown Utica Community Center, covering Gemini for daily operations, Claude for grant writing, and data-handling and privacy practices.
-- Built and documented a reproducible development environment for incoming research interns and contractors, automating provisioning so new arrivals could begin work without manual setup.
-- Led Denali preparation and crevasse rescue clinics on Mount Rainier and Mount Baker, teaching glacier travel, rope work, and rescue technique for expedition climbing.
-- Instructed ski and snowboard lessons and guided backcountry ski and snowshoe tours at Crystal Mountain Resort.
-- Conducted pre-trip gear checks and equipment consultations for 10 to 15 guided trips per season.
-
 ## Research Computing and Infrastructure
 
-**GPU and local inference:** NVIDIA GPU and CUDA environments running Ollama and vLLM for model serving, spanning quantized inference on consumer hardware and A100 instances for training and generation workloads. Configured and benchmarked a two-node NVIDIA DGX Spark cluster for multi-node LLM inference and throughput measurement.
+**GPU and local inference:** NVIDIA GPU and CUDA environments running Ollama and vLLM for model serving, spanning quantized inference on consumer hardware and A100 instances for training and generation workloads. Multi-node inference on NVIDIA DGX Spark with tensor- and pipeline-parallel vLLM serving.
 
-**Cloud:** Google Cloud Vertex AI, Model Garden, Document AI, and ADC authentication, including GPU-instance provisioning for two research teams and documented setup procedures for researchers joining those environments.
+**Cloud:** Google Cloud Compute Engine, Cloud Storage, Vertex AI, Model Garden, Document AI, RAG Engine, and ADC authentication, including GPU-instance provisioning and documented setup procedures for new researchers.
 
 **Containers and orchestration:** Multi-container Docker Compose environments for reproducible research stacks, with Proxmox VE virtualization for workload isolation.
 
@@ -300,11 +299,11 @@ Awarded for “Wasted Momentum: Vehicle-Powered Edge AI.”
 
 **Technical**
 
-- Databricks Certified Data Engineer Associate
 - Databricks Fundamentals
+- Databricks Certified Data Engineer Associate (in progress)
 - Microsoft Certified: Power BI Data Analyst Associate
+- AI Infrastructure and Operations — NVIDIA
 - Machine Learning Specialization — DeepLearning.AI and Stanford Online
-- AI Infrastructure and Operations Fundamentals — NVIDIA
 - Machine Learning Engineer — Google Cloud (in progress)
 
 **Professional**

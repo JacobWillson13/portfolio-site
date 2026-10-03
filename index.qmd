@@ -87,6 +87,20 @@ Each project preserves its analytical design, retained results, limitations, and
 
 ::::: {.project-grid .project-grid-home}
 ::: {.project-card}
+<p class="project-type">Analytics engineering · Financial data</p>
+
+### Seats-to-Cash
+
+A dbt and Snowflake finance stack that separates ARR expansion from repricing and ties billings, revenue, deferred revenue, and cash together, checked against an answer key.
+
+<div class="project-metric"><strong>15.7%</strong><span>of ARR growth identified as repricing</span></div>
+
+<p class="project-tools">dbt · Snowflake · Hightouch · Salesforce</p>
+
+[View repository →](https://github.com/JacobWillson13/seats-to-cash)
+:::
+
+::: {.project-card}
 <p class="project-type">Advanced analytics · Decision science</p>
 
 ### Freight Cost & Sampling Analysis
