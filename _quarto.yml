@@ -6,6 +6,8 @@ project:
     - projects.qmd
     - about.qmd
     - cv.qmd
+  resources:
+    - assets/js/lightbox.js
 
 website:
   title: "Jacob Willson"

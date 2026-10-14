@@ -1,16 +1,30 @@
 ---
 title: "Selected Projects"
 description: "Selected advanced analytics, data science, and applied AI projects by Jacob Willson."
+page-layout: full
+body-classes: projects-page
+include-after-body:
+  text: |
+    <script src="assets/js/lightbox.js" defer></script>
 ---
 
 ::: {.page-lede}
-These projects show how I frame analytical questions, build reproducible workflows, evaluate evidence, and translate technical results into practical conclusions. Each repository includes methods, retained results, and documentation for closer review.
+These projects show how I frame analytical questions, build reproducible workflows, evaluate evidence, and translate technical results into practical conclusions. Each repository includes methods, retained results, and documentation for closer review. Select any figure to enlarge it and page through the rest.
 :::
 
-## Analytics Engineering and Business Intelligence
+## Analytics Engineering and Data Platforms
 
 :::: {.project-grid .project-grid-wide}
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/seats-to-cash.webp" data-gallery="seats-to-cash" data-description="Streamlit app: month-end ARR, 2026 ARR movements by type, and billings vs revenue vs cash.">
+  <img src="assets/img/projects/seats-to-cash.webp" alt="Seats-to-Cash Streamlit app showing month-end ARR, ARR movements by type, and billings, revenue, and cash by month" width="1400" height="948" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/seats-to-cash-lineage.webp" data-gallery="seats-to-cash" data-description="dbt lineage from Orb, Stripe, and Salesforce sources to the ARR marts." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/seats-to-cash-hightouch.webp" data-gallery="seats-to-cash" data-description="Hightouch sync of the account-signals model to the Salesforce Account object." hidden aria-hidden="true"></a>
+```
+
 <p class="project-type">Analytics engineering · Financial data · Reconciliation</p>
 
 ### Seats-to-Cash
@@ -25,7 +39,67 @@ Built a dbt and Snowflake finance stack on synthetic Orb, Stripe, and Salesforce
 :::
 
 ::: {.project-card}
-<p class="project-type">Business intelligence · Sampling · Segmentation</p>
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/adventureworks.webp" data-gallery="adventureworks" data-description="Monthly revenue and orders by channel. Shaded months had no reseller batch; the July 2013 online expansion shows in order counts.">
+  <img src="assets/img/projects/adventureworks.webp" alt="Line charts of monthly revenue and order count by channel, with online orders jumping from about 330 to over 1,500 a month after July 2013" width="1400" height="823" loading="lazy">
+  <span class="figure-count">4 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/adventureworks-dashboard.webp" data-gallery="adventureworks" data-description="Overview page of the five-page Databricks AI/BI dashboard, deployed from JSON in the repository." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/adventureworks-margin.webp" data-gallery="adventureworks" data-description="Gross margin over time: total, by category, and by channel, from cost history joined by effective date." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/adventureworks-segments.webp" data-gallery="adventureworks" data-description="Customer segments: share of customers vs share of revenue, and recency vs value." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">Data engineering · Lakehouse · Analytics</p>
+
+### AdventureWorks Lakehouse
+
+Rebuilt a broken 72-file AdventureWorks export into a Databricks medallion lakehouse: PySpark bronze, a Lakeflow silver pipeline, a dbt star schema with 148 tests, five MLflow-tracked analyses, and a five-page AI/BI dashboard, all deployed as one Asset Bundle.
+
+<div class="project-result"><span>Key finding</span><strong>Resellers bring about three quarters of revenue at a 0.6% gross margin, while online holds a steady 40%. Forecasting did not beat a naive baseline (49.0% vs 49.4% WAPE), and the write-up reports that rather than hiding it.</strong></div>
+
+<p class="project-tools">Databricks · PySpark · Lakeflow · dbt · MLflow · AI/BI dashboards</p>
+
+[View repository →](https://github.com/JacobWillson13/adventureworks-lakehouse)
+:::
+
+::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/saas-stream.webp" data-gallery="saas-stream" data-description="Live Grafana dashboard during a seeded take: event throughput, active accounts, failed payments, and outlier flags.">
+  <img src="assets/img/projects/saas-stream.webp" alt="Azure Managed Grafana dashboard streaming live SaaS events, showing 476 events in the last minute, 777 active accounts, and outlier flags" width="1400" height="1013" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/saas-stream-outliers.webp" data-gallery="saas-stream" data-description="Outlier flags by type, recall against injected anomalies, and rolling trial-model metrics." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/saas-stream-erd.webp" data-gallery="saas-stream" data-description="App schema: eleven tables centered on accounts, linked by 16 foreign keys." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">Streaming analytics · Azure · Anomaly detection</p>
+
+### SaaS Usage Streaming on Azure
+
+Streamed about 500 events per minute from simulated CRM, product, and payment systems into Azure Database for PostgreSQL, with live outlier detection, an online trial-conversion model, and a 42-panel Azure Managed Grafana dashboard refreshing every 5 seconds.
+
+<div class="project-result"><span>Key finding</span><strong>Duplicate payments and negative invoices were caught at 1.00 recall and precision, about 2.5 seconds after landing. A first-pass 0.71 AUC for trial conversion turned out to be label leakage; the corrected holdout AUC is 0.54.</strong></div>
+
+<p class="project-tools">Python · PostgreSQL · Azure · Grafana · SQL</p>
+
+[View repository →](https://github.com/JacobWillson13/saas-usage-stream-azure)
+:::
+::::
+
+## Experimentation and Decision Science
+
+:::: {.project-grid .project-grid-wide}
+::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/freight.webp" data-gallery="freight" data-description="Load vs cost per km: raw correlation of 0.030, and 0.991 once compared within route, month, and hour.">
+  <img src="assets/img/projects/freight.webp" alt="Two scatter plots: raw load vs cost per km with correlation 0.030, and the same relationship within route, month, and hour with correlation 0.991" width="1400" height="573" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/freight-peak-hours.webp" data-gallery="freight" data-description="Peak hours cut mean speed and raise driver cost per km, while fuel intensity stays flat." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/freight-clusters.webp" data-gallery="freight" data-description="Route segments on the first two principal components, colored by cluster and by terrain." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">Decision science · Sampling · Segmentation</p>
 
 ### Freight Cost & Sampling Analysis
 
@@ -37,19 +111,24 @@ Analyzed a 500,000-trip synthetic U.S. freight network using sampling simulation
 
 [View repository →](https://github.com/JacobWillson13/freight-cost-analysis)
 :::
-::::
 
-## Experimentation and Decision Science
-
-:::: {.project-grid .project-grid-wide}
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/gemma4.webp" data-gallery="gemma4" data-description="Accuracy lift from oracle context, in percentage points, by model, question difficulty, and thinking mode.">
+  <img src="assets/img/projects/gemma4.webp" alt="Heatmap of accuracy lift from oracle context by model, difficulty, and thinking mode, peaking at 33 points for the smallest model on hard questions" width="1200" height="720" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/gemma4-pareto.webp" data-gallery="gemma4" data-description="Accuracy vs median latency on a log scale: the deployment trade-off across models and thinking modes." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/gemma4-accuracy.webp" data-gallery="gemma4" data-description="Accuracy by model, supplied context, and thinking mode, with 95% confidence ribbons." hidden aria-hidden="true"></a>
+```
+
 <p class="project-type">Experimental design · LLM evaluation · Deployment</p>
 
 ### Gemma 4 Security-Advisory Evaluation
 
-Designed and analyzed a controlled local experiment measuring how model size, supplied evidence, reasoning configuration, and temperature affect accuracy, latency, reliability, and deployment trade-offs.
+Designed and analyzed a controlled local experiment measuring how model size, supplied evidence, reasoning configuration, and temperature affect accuracy, latency, reliability, and deployment trade-offs across 3,900 inference runs.
 
-<div class="project-result"><span>Evidence base</span><strong>3,900 retained inference runs analyzed through question-blocked experimental methods.</strong></div>
+<div class="project-result"><span>Key finding</span><strong>Oracle context lifted the smallest model by up to 33 points on hard questions. E4B with thinking off reached 93.8% at 0.44 s median latency; 26B led at 95.6% but took 7.08 s, about 16 times longer.</strong></div>
 
 <p class="project-tools">Python · R · Ollama · Factorial design · ANOVA</p>
 
@@ -57,13 +136,21 @@ Designed and analyzed a controlled local experiment measuring how model size, su
 :::
 
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/uav.webp" data-gallery="uav" data-description="Best observed F1 for direct vs rolling generation across five architectures.">
+  <img src="assets/img/projects/uav.webp" alt="Bar chart comparing direct and rolling synthetic generation across five time-series architectures; rolling scores lower for every architecture" width="1400" height="794" loading="lazy">
+  <span class="figure-count">2 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/uav-volume.webp" data-gallery="uav" data-description="Downstream F1 as synthetic volume grows from 16K to 64K rows: gains are selective, not automatic." hidden aria-hidden="true"></a>
+```
+
 <p class="project-type">Synthetic data · Time series · Predictive evaluation</p>
 
 ### Synthetic UAV Telemetry Evaluation
 
 Compared seven synthetic time-series generation approaches across two UAV datasets using statistical fidelity and train-synthetic/test-real evaluation.
 
-<div class="project-result"><span>Evaluation design</span><strong>Downstream utility was tested alongside fidelity across changing models, volumes, and generation strategies.</strong></div>
+<div class="project-result"><span>Key finding</span><strong>Every rolling-generation variant scored below its direct counterpart, cutting downstream F1 by 33% to 77% across five architectures. Matching class balance did not produce matching predictive structure.</strong></div>
 
 <p class="project-tools">Python · PyTorch · GCP A100 · Time-series modeling</p>
 
@@ -71,13 +158,21 @@ Compared seven synthetic time-series generation approaches across two UAV datase
 :::
 
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/scio.webp" data-gallery="scio" data-description="Adjusted Rand Index: three empirical partitions agree 2 to 3 times more with each other than with the theoretical branches.">
+  <img src="assets/img/projects/scio.webp" alt="Bar chart of Adjusted Rand Index showing empirical clusterings agree with each other at 0.39 to 0.45 but with theory at only 0.12 to 0.23" width="1400" height="820" loading="lazy">
+  <span class="figure-count">2 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/scio-anchors.webp" data-gallery="scio" data-description="Anchor validity by branch: 92 of 106 testable features recovered, an overall hit rate of 0.868." hidden aria-hidden="true"></a>
+```
+
 <p class="project-type">NLP · Ontology validation · Research methods</p>
 
 ### SCIO Ontology Validation
 
 Combined literature validation, LLM-assisted evidence coding, embeddings, clustering, network analysis, and structured human review to evaluate a socio-cognitive influence ontology.
 
-<div class="project-result"><span>Research design</span><strong>Cluster solutions are tested against reference groupings and stability measures rather than accepted visually.</strong></div>
+<div class="project-result"><span>Key finding</span><strong>Three clustering methods agreed with each other 2 to 3 times more than with the theoretical branches (ARI 0.39 to 0.45 vs 0.12 to 0.23). The features hold up as analytical units; the branches work as navigation, not as empirical classes.</strong></div>
 
 <p class="project-tools">Python · Embeddings · HDBSCAN · NetworkX · Human review</p>
 
@@ -89,13 +184,21 @@ Combined literature validation, LLM-assisted evidence coding, embeddings, cluste
 
 :::: {.project-grid .project-grid-wide}
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/dome-rag.webp" data-gallery="dome-rag" data-description="Answer-match rate by retrieval strategy in the 50-question pilot.">
+  <img src="assets/img/projects/dome-rag.webp" alt="Bar chart of answer-match rate by retrieval strategy: no retrieval 10.8%, BM25 53.3%, dense 55.0%, hybrid 58.6%" width="1050" height="675" loading="lazy">
+  <span class="figure-count">2 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/dome-rag-latency.webp" data-gallery="dome-rag" data-description="Latency vs accuracy for every configuration, by retrieval strategy." hidden aria-hidden="true"></a>
+```
+
 <p class="project-type">RAG · Information retrieval · Evaluation</p>
 
 ### DOME Handbook RAG
 
-Built a local handbook question-answering application and two completed studies comparing retrieval strategies, embedding choices, and language models.
+Built a local handbook question-answering application and two completed studies comparing retrieval strategies, embedding choices, and language models across 6,672 question-level records.
 
-<div class="project-result"><span>Evidence base</span><strong>6,672 question-level records connect an interactive prototype with reproducible evaluation.</strong></div>
+<div class="project-result"><span>Key finding</span><strong>Hybrid retrieval reached a 58.6% answer-match rate against 10.8% with no retrieval, and the best single configurations reached 70%.</strong></div>
 
 <p class="project-tools">LangChain · ChromaDB · BM25 · Ollama · Gradio</p>
 
@@ -103,13 +206,19 @@ Built a local handbook question-answering application and two completed studies 
 :::
 
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/citebench.webp" data-gallery="citebench" data-description="Benchmark design: six extraction strategies normalized to one output schema and scored against silver labels.">
+  <img src="assets/img/projects/citebench.webp" alt="Diagram: an academic PDF flows through six extraction strategies into a shared schema and is scored against silver labels, with two caveats noted" width="1400" height="875" loading="lazy">
+</a>
+```
+
 <p class="project-type">Document intelligence · Benchmarking · Reproducibility</p>
 
 ### CiteBench
 
-Developed a reproducible benchmark comparing citation-extraction workflows across PDF, text, vision, targeted-context, hybrid, and specialist-parser approaches.
+Developed a reproducible benchmark comparing citation-extraction workflows across PDF, text, vision, targeted-context, hybrid, and specialist-parser approaches, with 705 recorded results across 11 variants.
 
-<div class="project-result"><span>Evidence base</span><strong>705 recorded workflow results across 11 executed variants under a shared schema and scoring framework.</strong></div>
+<div class="project-result"><span>Key finding</span><strong>Schema-valid output was not the same as useful output: the hybrid workflow returned structurally valid responses with no references. The GROBID baseline's high agreement is circular, because GROBID also produced the labels.</strong></div>
 
 <p class="project-tools">Python · PDF parsing · LLM evaluation · Schema validation</p>
 
@@ -117,6 +226,12 @@ Developed a reproducible benchmark comparing citation-extraction workflows acros
 :::
 
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/agentic-workflow.webp" data-gallery="agentic-workflow" data-description="Planning and execution separated by an approved project brief, with five human approval gates.">
+  <img src="assets/img/projects/agentic-workflow.webp" alt="Diagram: PLANNING.md produces an approved PROJECT_BRIEF.md, which EXECUTION.md turns into verified artifacts, with human approval gates at planning, architecture, review, interpretation, and release" width="1400" height="875" loading="lazy">
+</a>
+```
+
 <p class="project-type">Agentic systems · Quality gates · Reproducibility</p>
 
 ### Agentic Development Workflow
@@ -131,6 +246,14 @@ Developed a human-governed framework for planning and executing analytics, data-
 :::
 
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/wasted-momentum.webp" data-gallery="wasted-momentum" data-description="From the pitch deck: surplus electrical output in a running vehicle compared with edge AI hardware draw.">
+  <img src="assets/img/projects/wasted-momentum.webp" alt="Pitch deck slide: 280 million U.S. gas and diesel vehicles each generate 500 to 1,400 watts of unused electrical capacity, compared with a 25-watt Jetson Nano and a 240-watt DGX Spark" width="1400" height="787" loading="lazy">
+  <span class="figure-count">2 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/wasted-momentum-prototypes.webp" data-gallery="wasted-momentum" data-description="Prototype concept: an AI network distributed between two vehicles." hidden aria-hidden="true"></a>
+```
+
 <p class="project-type">Edge AI · Research proposal · Systems thinking</p>
 
 ### Wasted Momentum: Vehicle-Powered Edge AI
