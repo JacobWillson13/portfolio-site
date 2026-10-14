@@ -1,85 +1,264 @@
 ---
 title: "About"
-description: "Professional background and analytical approach of Jacob Willson."
+toc: false
+anchor-sections: true
+image: assets/img/social-card.png
 ---
 
+:::: {.cv-page}
+
 ::: {.page-lede}
-I am an advanced analytics professional and AI Research Fellow with experience spanning business intelligence, operational analytics, market research, data science, and AI evaluation.
+I'm a data analyst with over ten years in business intelligence, financial reporting, and process improvement, now an AI research fellow with the Griffiss Institute at the Air Force Research Laboratory. I build SQL, dbt, and Python workflows that replace manual processes and reconcile data across systems, and I design evaluations for machine-learning and LLM systems. I'm completing an M.S. in Data Science and Analytics at SUNY Polytechnic Institute, expected May 2027.
 :::
 
-:::: {.about-layout}
-::: {.about-narrative}
-I built my professional foundation through analytics work at New Balance and Forrester Research and through consulting and operational roles across multiple industries. That experience taught me to begin with the decision that needs to be made, understand how the underlying process produces the data, and communicate results in a form people can use.
+<p class="cv-contact">Clinton, New York · <a href="mailto:Jacob.Willson13@gmail.com">Jacob.Willson13@gmail.com</a> · <a href="https://github.com/JacobWillson13">GitHub</a> · <a href="https://www.linkedin.com/in/jacob-j-willson/">LinkedIn</a></p>
 
-## Current Focus
+## Experience
 
-On the data side, I build SQL and dbt data models and Python workflows that replace manual processes and reconcile figures across systems, the same kind of reconciliation work that recovered $5.5 million in overpayments at New Balance.
-
-My current work extends that foundation into NLP, retrieval-augmented generation, synthetic data, document intelligence, LLM evaluation, and AI infrastructure. I am particularly interested in evaluation design: defining appropriate comparisons, preserving run-level evidence, identifying failure modes, and separating promising results from claims the data cannot support.
-
-I am completing an M.S. in Data Science & Analytics in May 2027. My broader academic background includes graduate study in management and undergraduate study in technology management.
-:::
-
-::: {.profile-panel}
-<p class="eyebrow">At a glance</p>
-
-Current role
-: AI Research Fellow, Air Force Research Laboratory
-
-Based in
-: Clinton, New York
-
-Education
-: M.S. candidate, May 2027
-
-Focus
-: Advanced analytics, data science, and applied AI
-:::
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/afrl.jpeg" alt="" class="org-logo">
 ::::
+:::: {.cv-entry-content}
+### Griffiss Institute / Air Force Research Laboratory
 
-## How I Work
+**AI Research Fellow** · May 2026–Present
 
-I approach analytics and applied AI as connected disciplines rather than separate tracks. The habits that improve business intelligence—clear definitions, reliable data, appropriate comparisons, and decision-focused communication—also make machine-learning and LLM systems more useful and trustworthy.
-
-:::: {.principles-grid}
-::: {.principle-card}
-<p class="practice-number">01</p>
-
-### Start with the decision
-
-Define what needs to be learned or decided before choosing a tool, model, or metric.
-:::
-
-::: {.principle-card}
-<p class="practice-number">02</p>
-
-### Preserve the evidence
-
-Build reproducible workflows that retain run-level results, assumptions, and limitations.
-:::
-
-::: {.principle-card}
-<p class="practice-number">03</p>
-
-### Communicate for action
-
-Translate technical findings into conclusions that technical and non-technical audiences can use.
-:::
+- Built a reusable Python pipeline to acquire roughly 5,000 research papers from OpenAlex and Semantic Scholar, parse them, and extract structured evidence with LLMs, supporting literature-review automation and institutional trust research.
+- Benchmarked Python PDF-parsing libraries against LLM-based extraction on accuracy, segmentation quality, hallucination rate, and cost; the results set the pipeline's defaults.
+- Built reproducible ML and LLM evaluation workflows on SQLite, DuckDB, and PostgreSQL, with Qdrant for vector search, Pydantic schema validation, and resumable batch processing across multi-million-row experiment datasets.
+- Configured a two-node NVIDIA DGX Spark cluster for on-premises edge AI inference, benchmarking tensor- and pipeline-parallel vLLM serving of open-weight LLMs across concurrency levels to identify the highest-throughput configurations.
+- Set up a standardized development environment on DGX Spark hardware for incoming interns and contractors, automating the provisioning of Open WebUI, Tailscale, VS Code, and coding agents to mirror on-premises servers.
+- Designed and analyzed experiments in Python and R, tracking configurations in MLflow and scoring clustering quality, stability, and agreement against reference categories.
+- Applied natural language processing, embeddings, clustering, and network analysis to evaluate and refine a computational taxonomy of psychological influence and propaganda techniques affecting institutional trust.
+- Developed an agentic-development methodology for the team, defining project intake, agent roles, workflow decision trees, LLM skill files, and quality gates.
 ::::
+:::::
 
-## Beyond the Work
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/midtown-utica.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### Midtown Utica Community Center · Utica, New York
 
-Before moving fully into analytics and technology, I worked as a mountaineering and rock-climbing guide. That experience continues to shape how I think about preparation, uncertainty, risk, and decision-making in complex environments.
+**AI Deployment Consultant (Volunteer)** · April 2026–Present
 
-::: {.contact-band .contact-band-compact}
-<div>
-  <p class="eyebrow">Connect</p>
-  <h2>Continue the conversation</h2>
-  <p>Explore my repositories, review my CV, or reach out directly.</p>
-</div>
+- Ran needs-assessment sessions with nonprofit leadership to identify where AI could remove repetitive administrative work.
+- Deployed Gemini across Gmail, Calendar, and Drive and multi-user Claude access; trained the full five-person staff and wrote guidelines for handling client information with AI tools.
+- Set up Claude for grant writing and organizational project work, and Gemini for daily scheduling, email, and document tasks.
+::::
+:::::
 
-<div class="contact-actions">
-  <a class="btn btn-primary" href="mailto:Jacob.Willson13@gmail.com">Email</a>
-  <a class="btn btn-outline-dark" href="cv.qmd">View CV</a>
-</div>
-:::
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/suny-poly.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### SUNY Polytechnic Institute · AIX Research Group
+
+**AI Research Assistant** · September 2025–May 2026
+
+- Benchmarked RAG configurations with a research team, comparing retrieval strategies, embedding models, and language models.
+- Developed a RAG chatbot in collaboration with a partner university in Nigeria, evaluating local language and embedding models for operation on an 8 GB GPU.
+- Evaluated seven approaches to generating synthetic UAV telemetry using statistical fidelity measures and train-synthetic/test-real testing to assess downstream model performance.
+- Built and maintained the Google Cloud AI/ML environments supporting both research teams, including GPU workloads across Vertex AI, Model Garden, Document AI, and Gemini.
+- Supported faculty and graduate researchers with environment onboarding, ADC authentication, and runtime troubleshooting, and documented repeatable setup procedures.
+- Developed a Google AI and Google Cloud guide for graduate researchers covering Gemini, Colab AI, and credit usage; used by more than 30 researchers and interns, it became the source document for the [Internet Menace academic track](https://www.internetmenace.com/academic), a nine-unit curriculum built with SUNY Polytechnic Institute students.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/hudson-map-company.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### Hudson Map Company
+
+**Founding Operations Manager** · May 2025–April 2026
+
+- Co-developed prototypes for an agentic AI freight broker, using LangChain and LangGraph to extract and standardize load details from emails, generate quotes, and match carriers through Gmail and Highway APIs.
+- Helped build out freight brokerage operations, including carrier onboarding, digital booking workflows, and daily logistics coordination.
+- Implemented Highway alongside FMCSA data and monitoring tools to verify carrier identity and reduce exposure to freight fraud.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/new-balance.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### New Balance Footwear
+
+**Business Analyst, Sourced Manufacturing (Remote)** · June 2022–March 2025
+
+- Led the mold and tooling workstream of a manufacturing data transformation, standardizing thousands of spreadsheets with Excel macros and consolidating data with Python and SQL for centralized reporting.
+- Migrated tooling initialization, tracking, and amortization records into SharePoint, Power BI, and Flex PLM, replacing spreadsheet-based processes.
+- Managed a multiyear amortization reconciliation across more than ten factories in China, Indonesia, and Vietnam, reviewing roughly a decade of records and recovering $5.5 million in credit notes for overpayments.
+- Coordinated the reconciliation with U.S. and U.K. business teams, pulling supporting financial data from SAP.
+- Analyzed 500–1,000 footwear style-color combinations daily and built Power BI and Spotfire reporting for roughly 200 stakeholders, presenting category-level financial exposure and resolution options.
+- Developed demand estimates with product and project managers to guide tooling investment and factory capacity decisions.
+- Served as the business subject-matter expert during Flex PLM onboarding and then used the system as a primary user.
+- Worked with the Snowflake implementation team to bring current and archived PLM data onto one platform, feeding Power BI dashboards and Power Automate workflows.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<span class="org-monogram" aria-hidden="true">JW</span>
+::::
+:::: {.cv-entry-content}
+### Independent Consulting · JWillson LLC
+
+**Analytics, E-commerce, and Market Research** · June 2018–September 2022
+
+- Built Shopify sites for small businesses, configuring inventory and order workflows and supporting reporting and order management.
+- Conducted market research and product-strategy interviews with professional skiers, snowboarders, and climbers for Evolv Climbing, informing product-line organization, positioning, and marketing.
+- Partnered with the founder of Montana Overlanding on expansion planning, acquiring three off-road and camping-equipped vehicles and renting them through the company.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos .logo-stack}
+<img src="assets/img/organizations/miyar-adventures.jpeg" alt="" class="org-logo org-logo-small">
+<img src="assets/img/organizations/crystal-mountain.jpeg" alt="" class="org-logo org-logo-small">
+::::
+:::: {.cv-entry-content}
+### Miyar Adventures / Crystal Mountain Resort
+
+**Professional Alpine Guide, Instructor, and Retail Operations** · November 2016–April 2022
+
+- Guided multi-day mountaineering trips and taught glacier travel and rescue on Mount Rainier and Mount Baker, running 10 to 15 guided trips per season.
+- Led Denali preparation and crevasse rescue clinics teaching technical skills for expedition climbing.
+- Served as team lead on a Denali expedition with Explore Inspired, through a sponsorship that funded several trips in exchange for my writing, photography, and subject-matter expertise on Rainier and Denali.
+- Worked in Miyar's outdoor retail shop, collaborating with the store manager on retail layout, assembling equipment kits for guided-trip clients, and advising clients on gear selection with pre-trip equipment checks.
+- Managed daily retail operations and employee scheduling for Crystal Mountain's ski and snowboard demo shop during three winter seasons, and instructed ski and snowboard lessons and guided backcountry ski and snowshoe tours.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/forrester.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### Forrester Research
+
+**Business Intelligence Analyst** · August 2015–November 2016
+
+- Defined cross-functional KPIs and added Salesforce fields to distinguish products bundled into commercial accounts, improving revenue attribution and reporting on account growth.
+- Analyzed performance across business units, turning Salesforce data into reporting for business stakeholders.
+- Implemented Tableau and automated recurring reporting on bookings, revenue, capacity, and product cycle time to support planning decisions.
+- Presented monthly operational and financial performance to the CEO and executive leadership team.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos .logo-stack}
+<img src="assets/img/organizations/boston-scientific.jpeg" alt="" class="org-logo org-logo-small">
+<img src="assets/img/organizations/reebok.jpeg" alt="" class="org-logo org-logo-small">
+<img src="assets/img/organizations/beacon-consulting.jpeg" alt="" class="org-logo org-logo-small">
+::::
+:::: {.cv-entry-content}
+### Northeastern University Graduate Co-ops
+
+**Business Analysis and Process Improvement** · December 2013–July 2015
+
+- **Boston Scientific, Process Improvement Analyst II:** Planned and estimated the global rollout of an OpenText Invoice Management System across 41 countries. Tracked project status, issues, and timelines across international operations, with supporting work in SAP.
+- **Reebok International, Graduate Finance and Sales Operations Intern:** Supported the U.S. finance and sales-operations team with reporting and analysis in SAP. Collected, manipulated, and uploaded point-of-sale data; tracked debits and credits for cost-center accuracy; and built expense schedules for operating-expenditure planning.
+- **Beacon Consulting Group (now part of Accenture), Intern Associate:** Developed process maps identifying weaknesses in client FP&A and trade-processing operations and supported client deliverables and business development.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/cool-gear.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### Cool Gear International · Plymouth, Massachusetts
+
+**Business Analyst** · December 2011–July 2013
+
+- Analyzed market, sales, and POS data across domestic and international accounts, producing forecasting and inventory analysis for seasonal product programs.
+- Identified product design trends to inform upcoming seasonal programs.
+- Built and maintained recurring account-level sales reporting.
+::::
+:::::
+
+## Skills
+
+**Languages:** SQL, Python (pandas, NumPy, SciPy, PySpark, scikit-learn, Pydantic), R (tidyverse), Bash.
+
+**Statistics and machine learning:** regression, ANOVA, factorial experimental design, sampling design, statistical inference, classification, clustering and community detection; PyTorch, sentence-transformers, HDBSCAN, UMAP, NetworkX.
+
+**LLM and retrieval systems:** Ollama, vLLM, LangChain, LangGraph, ChromaDB, Qdrant, BM25 and hybrid retrieval, LLM-based extraction and scoring, prompt versioning, evaluation-harness design.
+
+**Data and analytics engineering:** dbt, Snowflake, Databricks (Lakeflow, Asset Bundles), PostgreSQL, DuckDB, SQLite, MLflow, Hightouch, JSON Schema and Pydantic validation, PDF parsing (PyMuPDF, pdfplumber).
+
+**Business intelligence and visualization:** Power BI, Tableau, TIBCO Spotfire, Grafana, Streamlit, LookML, Excel and macros, matplotlib, seaborn, Quarto.
+
+**Infrastructure and cloud:** Google Cloud (Vertex AI, Model Garden, Document AI, RAG Engine, Compute Engine GPU instances), Azure Database for PostgreSQL and Managed Grafana, NVIDIA CUDA, multi-node vLLM serving on DGX Spark, Docker Compose, Proxmox VE, Prometheus, Tailscale, Ubuntu Linux.
+
+**Engineering practice:** Git, GitHub Actions, pytest, MLflow experiment tracking, versioned prompts and configurations, idempotent batch pipelines, Claude Code and agent-assisted development.
+
+**Enterprise systems:** SAP, Flex PLM, Salesforce, SharePoint, OpenText Invoice Management, Shopify, HubSpot, EDI and POS systems.
+
+## Education
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/suny-poly.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### SUNY Polytechnic Institute · Utica, New York
+
+**Master of Science in Data Science and Analytics** · Expected May 2027  
+Focus: Computer Science and Artificial Intelligence
+
+**Selected graduate coursework:** Statistical Inference; Regression and Analysis of Variance; Data Collection and Design of Experiments; Introduction to Machine Learning; Artificial Intelligence; Big Data Platforms and Analytics; Database Systems.
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/northeastern.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### Northeastern University · Boston, Massachusetts
+
+**Master of Science in Management** · April 2015  
+Focus: Project Management and Economics
+::::
+:::::
+
+::::: {.cv-entry}
+:::: {.cv-entry-logos}
+<img src="assets/img/organizations/alfred-state.jpeg" alt="" class="org-logo">
+::::
+:::: {.cv-entry-content}
+### Alfred State College · Alfred, New York
+
+**Bachelor of Business Administration** · May 2012  
+Focus: Technology Management
+::::
+:::::
+
+## Awards and Certifications
+
+**First Place, Elevator Pitch Competition** · SUNY Polytechnic Institute, 2025
+: For [Wasted Momentum: Vehicle-Powered Edge AI](index.qmd#wasted-momentum).
+
+**Technical**
+
+- Databricks Fundamentals
+- Databricks Certified Data Engineer Associate (in progress)
+- Microsoft Certified: Power BI Data Analyst Associate
+- AI Infrastructure and Operations, NVIDIA
+- Machine Learning Specialization, DeepLearning.AI and Stanford Online
+- Machine Learning Engineer, Google Cloud (in progress)
+
+**Professional**
+
+- Certified Associate in Project Management (CAPM), Project Management Institute
+- Controlled Unclassified Information (CUI) Training, U.S. Department of Defense
+
+::::

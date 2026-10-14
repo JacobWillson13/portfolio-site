@@ -1,10 +1,11 @@
-"""Method diagrams for CiteBench and the Agentic Development Workflow.
+"""Method diagrams for CiteBench, the Agentic Development Workflow, and the
+Wasted Momentum deployment screening table.
 
 Usage: python scripts/project_diagrams.py OUT_DIR   (requires cairosvg)
-Writes citebench.{svg,png} and agentic-workflow.{svg,png}; the site uses
-WebP copies in assets/img/projects/.
+Writes citebench, agentic-workflow, and wasted-momentum-screening as
+SVG and PNG; the site uses WebP copies in assets/img/projects/.
 
-Both render at 1600x1000 (16:10) with large type so they stay legible
+All render at 1600x1000 (16:10) with large type so they stay legible
 when shown at roughly 480px wide on a project card.
 """
 import sys
@@ -136,9 +137,65 @@ def agentic():
     return "".join(s)
 
 
+def screening():
+    """Deployment screening table from the Wasted Momentum white paper, section 4.
+
+    Cell shading marks whether each value favors vehicle-hosted compute;
+    every cell is also labeled, so the meaning never rests on color alone.
+    """
+    fav, mid, unf = "#d4e5ea", "#efefeb", WARN_SOFT
+    rows = [
+        ("Emergency response", [("Absent", fav), ("Tight", fav), ("High", fav), ("High", fav), ("Very high", fav)], "Strong"),
+        ("Defense, expeditionary", [("Contested", fav), ("Tight", fav), ("High", fav), ("High", fav), ("Very high", fav)], "Strong"),
+        ("Remote inspection", [("Poor", fav), ("Moderate", mid), ("High", fav), ("High", fav), ("High", fav)], "Strong"),
+        ("Precision agriculture", [("Poor", fav), ("Moderate", mid), ("High", fav), ("High", fav), ("High", fav)], "Strong"),
+        ("Campus fleets", [("Good", unf), ("Loose", unf), ("Moderate", mid), ("Moderate", mid), ("Low", unf)], "Pilot testbed"),
+        ("Long-haul logistics", [("Variable", mid), ("Loose", unf), ("Low", unf), ("High", fav), ("Low", unf)], "Conditional"),
+        ("Rideshare, consumer", [("Good", unf), ("Loose", unf), ("Low", unf), ("Low", unf), ("Low", unf)], "Weak"),
+    ]
+    heads = [("Backhaul", "access"), ("Latency", "need"), ("Edge", "data"),
+             ("Incidental", "runtime"), ("Alt. infra", "cost")]
+    fit_style = {
+        "Strong": (ACCENT, SURFACE),
+        "Pilot testbed": (mid, INK),
+        "Conditional": (mid, INK),
+        "Weak": (WARN, SURFACE),
+    }
+    s = [head()]
+    s.append(text(60, 66, "Deployment screening: strongest where connectivity is the constraint",
+                  size=40, weight=700, anchor="start"))
+    x0, label_w, col_w, fit_w = 60, 410, 172, 230
+    y0, head_h, row_h, gap = 130, 104, 92, 6
+    for j, (a, b) in enumerate(heads):
+        cx = x0 + label_w + j * col_w + col_w / 2
+        s.append(text(cx, y0 + 34, a, size=28, weight=600))
+        s.append(text(cx, y0 + 70, b, size=28, weight=600))
+    fx = x0 + label_w + 5 * col_w + 12
+    s.append(text(fx + fit_w / 2, y0 + 52, "Fit", size=30, weight=700))
+    for i, (name, cells, fit) in enumerate(rows):
+        y = y0 + head_h + i * row_h
+        s.append(text(x0, y + row_h / 2 - gap / 2, name, size=31, weight=600, anchor="start"))
+        for j, (val, fill) in enumerate(cells):
+            cx = x0 + label_w + j * col_w
+            s.append(box(cx + gap / 2, y, col_w - gap, row_h - gap, fill=fill, stroke=fill, sw=0, r=8))
+            s.append(text(cx + col_w / 2, y + row_h / 2 - gap / 2, val, size=27))
+        bg, fg = fit_style[fit]
+        s.append(box(fx, y, fit_w, row_h - gap, fill=bg, stroke=bg, sw=0, r=8))
+        s.append(text(fx + fit_w / 2, y + row_h / 2 - gap / 2, fit, size=28, weight=700, fill=fg))
+    ly = y0 + head_h + len(rows) * row_h + 40
+    lx = x0
+    for label, fill in (("Favors vehicle compute", fav), ("Mixed", mid), ("Favors centralized compute", unf)):
+        s.append(box(lx, ly - 16, 32, 32, fill=fill, stroke=fill, sw=0, r=6))
+        s.append(text(lx + 46, ly, label, size=26, fill=MUTED, anchor="start"))
+        lx += 46 + len(label) * 14 + 60
+    s.append("</svg>")
+    return "".join(s)
+
+
 if __name__ == "__main__":
     out = sys.argv[1]
-    for name, fn in (("citebench", citebench), ("agentic-workflow", agentic)):
+    for name, fn in (("citebench", citebench), ("agentic-workflow", agentic),
+                     ("wasted-momentum-screening", screening)):
         svg = fn()
         open(f"{out}/{name}.svg", "w").write(svg)
         cairosvg.svg2png(bytestring=svg.encode(), write_to=f"{out}/{name}.png",
