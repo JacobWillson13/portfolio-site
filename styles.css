@@ -310,6 +310,139 @@ main.content {
   line-height: 1.25;
 }
 
+/* Project figures: a fixed 16:10 frame so cards align regardless of the
+   source image's aspect ratio. Contain, not cover, so axes never get cropped. */
+.project-figure {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  margin: -1.65rem -1.65rem 1.35rem;
+  padding: 0.75rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  background: #f3f4f1;
+  cursor: zoom-in;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 220ms ease;
+}
+
+.project-card:hover .project-figure img {
+  transform: scale(1.015);
+}
+
+.project-figure:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.project-figure:has(.figure-count) {
+  padding-bottom: 2.1rem;
+}
+
+.figure-count {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.45rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(23, 25, 27, 0.72);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* Projects page: wider than the default article column so figures read. */
+.projects-page main.content {
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* Quarto wraps everything after a card's h3 in a <section>. Make it a flex
+   column so the repository link sits at the bottom of every card. */
+.project-card > section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.project-card > section > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .projects-page main.content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .project-figure {
+    padding: 0.5rem;
+  }
+
+  .project-figure:has(.figure-count) {
+    padding-bottom: 2rem;
+  }
+}
+
+/* An odd card at the end of a two-column section spans the row as a feature
+   card: a wide figure on top, then the text in two columns. */
+@media (min-width: 761px) {
+  .project-grid-wide > .project-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 2.4rem;
+    align-content: start;
+  }
+
+  .project-grid-wide > .project-card:last-child:nth-child(odd) > section {
+    display: contents;
+  }
+
+  .project-grid-wide > .project-card:last-child:nth-child(odd) > .project-figure {
+    grid-column: 1 / -1;
+    aspect-ratio: 21 / 9;
+  }
+
+  .project-grid-wide > .project-card:last-child:nth-child(odd) .project-type,
+  .project-grid-wide > .project-card:last-child:nth-child(odd) h3,
+  .project-grid-wide > .project-card:last-child:nth-child(odd) h3 + p {
+    grid-column: 1;
+  }
+
+  .project-grid-wide > .project-card:last-child:nth-child(odd) .project-result {
+    grid-column: 2;
+    grid-row: 2 / span 3;
+    align-self: start;
+    margin-top: 0;
+  }
+
+  .project-grid-wide > .project-card:last-child:nth-child(odd) .project-tools {
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+  .project-grid-wide > .project-card:last-child:nth-child(odd) section > p:last-child {
+    grid-column: 2;
+    grid-row: 6;
+    padding-top: 0;
+  }
+}
+
 .project-card > p:last-child {
   margin-top: auto;
   margin-bottom: 0;
@@ -807,5 +940,114 @@ main.content {
   a {
     color: #000000;
     text-decoration: none;
+  }
+}
+
+/* Figure lightbox (assets/js/lightbox.js) */
+.lb {
+  width: min(1200px, calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+.lb::backdrop {
+  background: rgba(17, 19, 21, 0.86);
+}
+
+.lb-figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.lb-img {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 9rem);
+  object-fit: contain;
+  background: #f3f4f1;
+}
+
+.lb-caption {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0.8rem 1.1rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.lb-count {
+  flex: none;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.lb-btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lb-btn:focus-visible {
+  outline: 3px solid #9fc3cf;
+  outline-offset: 2px;
+}
+
+.lb-close {
+  top: -0.6rem;
+  right: -0.6rem;
+}
+
+.lb-prev,
+.lb-next {
+  top: calc(50% - 2rem);
+}
+
+.lb-prev {
+  left: -1.4rem;
+}
+
+.lb-next {
+  right: -1.4rem;
+}
+
+.lb-btn[hidden] {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .lb-prev {
+    left: 0.4rem;
+  }
+
+  .lb-next {
+    right: 0.4rem;
+  }
+
+  .lb-close {
+    top: 0.4rem;
+    right: 0.4rem;
+  }
+}
+
+@media print {
+  .figure-count {
+    display: none;
   }
 }

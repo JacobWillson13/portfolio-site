@@ -2,6 +2,9 @@
 pagetitle: "Jacob Willson | Advanced Analytics, Data Science, and Applied AI"
 description: "Advanced analytics, business intelligence, data science, and applied AI portfolio."
 page-layout: full
+include-after-body:
+  text: |
+    <script src="assets/js/lightbox.js" defer></script>
 ---
 
 :::::: {.hero}
@@ -22,7 +25,7 @@ I combine more than a decade in business intelligence and operational analytics 
 <div class="signal-item"><strong>10+</strong><span>years across analytics and BI</span></div>
 <div class="signal-item"><strong>500K</strong><span>freight trips analyzed</span></div>
 <div class="signal-item"><strong>3,900</strong><span>controlled LLM evaluation runs</span></div>
-<div class="signal-item"><strong>6,672</strong><span>RAG evaluation records</span></div>
+<div class="signal-item"><strong>1.25M</strong><span>rows streamed into Azure</span></div>
 </div>
 </div>
 :::::
@@ -87,6 +90,12 @@ Each project preserves its analytical design, retained results, limitations, and
 
 ::::: {.project-grid .project-grid-home}
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/seats-to-cash.webp" data-gallery="home-seats-to-cash" data-description="Streamlit app: month-end ARR, 2026 ARR movements by type, and billings vs revenue vs cash.">
+  <img src="assets/img/projects/seats-to-cash.webp" alt="Seats-to-Cash Streamlit app showing month-end ARR, ARR movements by type, and billings, revenue, and cash by month" width="1400" height="948" loading="lazy">
+</a>
+```
+
 <p class="project-type">Analytics engineering · Financial data</p>
 
 ### Seats-to-Cash
@@ -101,27 +110,39 @@ A dbt and Snowflake finance stack that separates ARR expansion from repricing an
 :::
 
 ::: {.project-card}
-<p class="project-type">Advanced analytics · Decision science</p>
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/adventureworks.webp" data-gallery="home-adventureworks" data-description="Monthly revenue and orders by channel. Shaded months had no reseller batch; the July 2013 online expansion shows in order counts.">
+  <img src="assets/img/projects/adventureworks.webp" alt="Line charts of monthly revenue and order count by channel, with online orders jumping from about 330 to over 1,500 a month after July 2013" width="1400" height="823" loading="lazy">
+</a>
+```
 
-### Freight Cost & Sampling Analysis
+<p class="project-type">Data engineering · Lakehouse</p>
 
-A 500,000-trip study showing how sampling design, confounding controls, and route segmentation change the operational conclusions available from freight data.
+### AdventureWorks Lakehouse
 
-<div class="project-metric"><strong>0.991</strong><span>controlled load–cost correlation</span></div>
+A Databricks medallion lakehouse that turns a broken 72-file export into a tested dbt star schema, MLflow-tracked analyses, and a five-page AI/BI dashboard, deployed as one Asset Bundle.
 
-<p class="project-tools">Python · Statistical analysis · Segmentation</p>
+<div class="project-metric"><strong>0.6%</strong><span>reseller gross margin on about three quarters of revenue</span></div>
 
-[View repository →](https://github.com/JacobWillson13/freight-cost-analysis)
+<p class="project-tools">Databricks · PySpark · dbt · MLflow</p>
+
+[View repository →](https://github.com/JacobWillson13/adventureworks-lakehouse)
 :::
 
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/gemma4.webp" data-gallery="home-gemma4" data-description="Accuracy lift from oracle context, in percentage points, by model, question difficulty, and thinking mode.">
+  <img src="assets/img/projects/gemma4.webp" alt="Heatmap of accuracy lift from oracle context by model, difficulty, and thinking mode, peaking at 33 points for the smallest model on hard questions" width="1200" height="720" loading="lazy">
+</a>
+```
+
 <p class="project-type">Experimental design · LLM evaluation</p>
 
 ### Gemma 4 Security-Advisory Evaluation
 
 A controlled local experiment measuring how model size, supplied evidence, reasoning configuration, and temperature affect accuracy, latency, and reliability.
 
-<div class="project-metric"><strong>3,900</strong><span>retained evaluation runs</span></div>
+<div class="project-metric"><strong>93.8%</strong><span>accuracy at 0.44 s for E4B, vs 95.6% at 7.08 s for 26B</span></div>
 
 <p class="project-tools">Python · R · Ollama · ANOVA</p>
 
@@ -129,13 +150,19 @@ A controlled local experiment measuring how model size, supplied evidence, reaso
 :::
 
 ::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/dome-rag.webp" data-gallery="home-dome-rag" data-description="Answer-match rate by retrieval strategy in the 50-question pilot.">
+  <img src="assets/img/projects/dome-rag.webp" alt="Bar chart of answer-match rate by retrieval strategy: no retrieval 10.8%, BM25 53.3%, dense 55.0%, hybrid 58.6%" width="1050" height="675" loading="lazy">
+</a>
+```
+
 <p class="project-type">RAG · Information retrieval</p>
 
 ### DOME Handbook RAG
 
 A local question-answering system paired with completed experiments comparing retrieval strategies, embedding models, and language models.
 
-<div class="project-metric"><strong>6,672</strong><span>question-level evaluation records</span></div>
+<div class="project-metric"><strong>58.6%</strong><span>answer match with hybrid retrieval, vs 10.8% without</span></div>
 
 <p class="project-tools">LangChain · ChromaDB · BM25 · Ollama</p>
 
