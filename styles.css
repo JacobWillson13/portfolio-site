@@ -129,7 +129,7 @@ main.content {
 
 .hero {
   margin-top: -1rem;
-  padding: 6.5rem 1.5rem 6rem;
+  padding: 4.5rem 1.5rem 4rem;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
@@ -157,10 +157,77 @@ main.content {
   line-height: 1.02;
 }
 
-.eyebrow,
+/* The homepage sets a title only so Quarto leaves the hero h1 in place. */
+.home-page #title-block-header {
+  display: none;
+}
+
+.hero-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-copy > p {
+  max-width: 760px;
+  margin-bottom: 1.4rem;
+  color: #34393d;
+  font-size: 1.22rem;
+  line-height: 1.65;
+}
+
+.hero-copy > p.hero-meta {
+  margin-bottom: 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Homepage project index */
+.projects-shell {
+  scroll-margin-top: 4.5rem;
+}
+
+.jump-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.jump-row span {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.jump-row a {
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.projects-note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-group {
+  scroll-margin-top: 4.5rem;
+}
+
+.project-group > h2 {
+  margin-top: 3rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.5rem;
+}
+
+.project-card .pdf-link + .pdf-link {
+  margin-left: 1.1rem;
+}
+
 .project-type,
-.signal-heading,
-.practice-number,
 .project-tools,
 .project-result span {
   margin-bottom: 0.55rem;
@@ -171,123 +238,30 @@ main.content {
   text-transform: uppercase;
 }
 
-.hero-copy > p:not(.eyebrow) {
-  max-width: 720px;
-  margin-bottom: 2rem;
-  color: #34393d;
-  font-size: 1.22rem;
-  line-height: 1.65;
-}
-
-.signal-panel {
-  padding: 1.75rem;
-  border: 1px solid rgba(49, 93, 107, 0.2);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: var(--shadow);
-}
-
-.signal-heading {
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.signal-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.signal-item {
-  min-height: 118px;
-  padding: 1.2rem 1rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.signal-item:nth-child(odd) {
-  border-right: 1px solid var(--line);
-}
-
-.signal-item:nth-last-child(-n + 2) {
-  border-bottom: 0;
-}
-
-.signal-item strong,
-.signal-item span {
-  display: block;
-}
-
-.signal-item strong {
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 2rem;
-  line-height: 1.1;
-}
-
-.signal-item span {
-  margin-top: 0.45rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.4;
-}
-
 .section-shell {
   padding: 5rem 1.5rem 0;
 }
 
-.section-heading {
-  max-width: 790px;
-  margin-bottom: 2rem;
-}
-
-.section-heading h2,
 .contact-band h2 {
   margin-top: 0.2rem;
   font-size: clamp(2rem, 4.5vw, 3.15rem);
 }
 
-.practice-grid,
-.project-grid,
-.principles-grid {
+.project-grid {
   display: grid;
   gap: 1.35rem;
   margin: 1.5rem 0 2.5rem;
 }
 
-.practice-grid,
-.principles-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.project-grid-home {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .project-grid-wide {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-bottom: 4.5rem;
+  margin-bottom: 1rem;
 }
 
-.practice-item,
-.project-card,
-.principle-card {
+.project-card {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--surface);
-}
-
-.practice-item,
-.principle-card {
-  padding: 1.6rem;
-  border-top: 3px solid var(--accent);
-}
-
-.practice-number {
-  color: var(--line-strong);
-}
-
-.practice-item h3,
-.principle-card h3 {
-  margin-bottom: 0.75rem;
 }
 
 .project-card {
@@ -360,15 +334,6 @@ main.content {
   line-height: 1.5;
 }
 
-/* Projects page: wider than the default article column so figures read. */
-.projects-page main.content {
-  max-width: 1180px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-}
-
 /* Quarto wraps everything after a card's h3 in a <section>. Make it a flex
    column so the repository link sits at the bottom of every card. */
 .project-card > section {
@@ -384,11 +349,6 @@ main.content {
 }
 
 @media (max-width: 760px) {
-  .projects-page main.content {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
   .project-figure {
     padding: 0.5rem;
   }
@@ -449,40 +409,16 @@ main.content {
   padding-top: 0.85rem;
 }
 
-.project-card a,
-.section-link {
+.project-card a {
   font-size: 0.9rem;
   font-weight: 750;
 }
 
-.project-metric,
 .project-result {
   margin: 1rem 0;
   border: 1px solid rgba(49, 93, 107, 0.15);
   border-radius: 8px;
   background: var(--accent-soft);
-}
-
-.project-metric {
-  padding: 1rem 1.1rem;
-}
-
-.project-metric strong,
-.project-metric span {
-  display: block;
-}
-
-.project-metric strong {
-  color: var(--accent-dark);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 2rem;
-  line-height: 1.05;
-}
-
-.project-metric span {
-  margin-top: 0.35rem;
-  color: #435158;
-  font-size: 0.83rem;
 }
 
 .project-result {
@@ -509,25 +445,6 @@ main.content {
   color: var(--muted);
   font-size: 0.72rem;
   line-height: 1.5;
-}
-
-.experience-bridge,
-.project-note {
-  padding: 2.2rem 2.4rem;
-  border-left: 4px solid var(--accent);
-  border-radius: 0 12px 12px 0;
-  background: var(--surface);
-  box-shadow: 0 8px 24px rgba(23, 25, 27, 0.035);
-}
-
-.experience-bridge h3,
-.project-note h3 {
-  font-size: clamp(1.55rem, 3vw, 2rem);
-}
-
-.section-link-standalone {
-  display: inline-block;
-  margin-top: 0.3rem;
 }
 
 .contact-section {
@@ -557,10 +474,6 @@ main.content {
 .contact-actions {
   flex: 0 0 auto;
   white-space: nowrap;
-}
-
-.contact-band-compact {
-  margin-top: 3.5rem;
 }
 
 .btn {
@@ -595,58 +508,6 @@ main.content {
   border-color: var(--accent-dark);
   background: var(--accent-dark);
   color: #ffffff;
-}
-
-.about-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(250px, 0.65fr);
-  gap: 3.5rem;
-  align-items: start;
-}
-
-.about-narrative h2 {
-  margin-top: 2.5rem;
-}
-
-.profile-panel {
-  position: sticky;
-  top: 6rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(49, 93, 107, 0.2);
-  border-radius: 12px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.profile-panel dl {
-  margin: 0;
-}
-
-.profile-panel dt {
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 750;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.profile-panel dt:first-of-type {
-  padding-top: 0;
-  border-top: 0;
-}
-
-.profile-panel dd {
-  margin: 0.25rem 0 0.9rem;
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.02rem;
-  line-height: 1.4;
-}
-
-.profile-panel dd:last-child {
-  margin-bottom: 0;
 }
 
 .cv-page {
@@ -777,24 +638,6 @@ main.content {
   .hero-inner {
     grid-template-columns: 1fr;
   }
-
-  .signal-panel {
-    max-width: 680px;
-  }
-
-  .project-grid-home,
-  .practice-grid,
-  .principles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-panel {
-    position: static;
-  }
 }
 
 @media (max-width: 760px) {
@@ -833,30 +676,15 @@ main.content {
     padding: 4rem 1rem 0;
   }
 
-  .hero-copy > p:not(.eyebrow),
   .page-lede {
     font-size: 1.08rem;
   }
 
-  .signal-panel,
-  .project-card,
-  .practice-item,
-  .principle-card {
+  .project-card {
     border-radius: 9px;
   }
 
-  .signal-panel {
-    padding: 1rem;
-  }
-
-  .signal-item {
-    min-height: 108px;
-    padding: 1rem 0.75rem;
-  }
-
-  .experience-bridge,
-  .contact-band,
-  .project-note {
+  .contact-band {
     padding: 1.6rem;
   }
 
