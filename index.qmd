@@ -113,6 +113,29 @@ A real-time pipeline streaming about 500 events per minute into Azure PostgreSQL
 :::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 ```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/stockout.webp" data-gallery="stockout" data-description="Share of alerts that are real stockouts at each daily review capacity, model vs best baseline, on the held-out test week.">
+  <img src="assets/img/projects/stockout.webp" alt="Line chart of precision by daily review capacity: the model reaches 0.651 at the top 10% of series against 0.549 for the best baseline" width="1026" height="559" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/stockout-by-hour.webp" data-gallery="stockout" data-description="Stockout rate by hour of day, overall and by category: low in the morning, about 40% by closing and overnight." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/stockout-shap.webp" data-gallery="stockout" data-description="SHAP summary for the final model: other stores' stockouts and late-night empty shelves rank highest." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">Predictive modeling · Retail · Model evaluation</p>
+
+### Next-Day Stockout Alerts
+
+A model that ranks 50,000 perishable store-product series each evening by their risk of running out tomorrow, built on a SQL feature pipeline and evaluated with a rolling backtest and store-level bootstrap intervals.
+
+<div class="project-result"><span>Key finding</span><strong>At 5,000 alerts a day, 65.1% were real stockouts against 54.9% for the best simple baseline, driven mostly by the same product running out in other stores. It catches about 19% of next-day stockouts at that capacity, so it works as a ranking aid.</strong></div>
+
+<p class="project-tools">Python · SQL · DuckDB · LightGBM · SHAP · pytest</p>
+
+[View repository →](https://github.com/JacobWillson13/freshretail-stockout-prediction)
+:::
+
+::: {.project-card}
+```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/freight.webp" data-gallery="freight" data-description="Load vs cost per km: raw correlation of 0.030, and 0.991 once compared within route, month, and hour.">
   <img src="assets/img/projects/freight.webp" alt="Two scatter plots: raw load vs cost per km with correlation 0.030, and the same relationship within route, month, and hour with correlation 0.991" width="1400" height="573" loading="lazy">
   <span class="figure-count">3 figures</span>
