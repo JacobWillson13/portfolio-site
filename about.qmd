@@ -8,7 +8,7 @@ image: assets/img/social-card.png
 :::: {.cv-page}
 
 ::: {.page-lede}
-I'm a data analyst with over ten years in business intelligence, financial reporting, and process improvement, now an AI research fellow with the Griffiss Institute at the Air Force Research Laboratory. I build SQL, dbt, and Python workflows that replace manual processes and reconcile data across systems, and I design evaluations for machine-learning and LLM systems. I'm completing an M.S. in Data Science and Analytics at SUNY Polytechnic Institute, expected May 2027.
+I'm a data analyst with over ten years in business intelligence, financial reporting, and process improvement, now an AI research fellow at the Air Force Research Laboratory. I build SQL, dbt, and Python workflows that replace manual processes and reconcile data across systems, and I design evaluations for machine-learning and LLM systems. I'm completing an M.S. in Data Science and Analytics at SUNY Polytechnic Institute, expected May 2027.
 :::
 
 <p class="cv-contact">Clinton, New York · <a href="mailto:Jacob.Willson13@gmail.com">Jacob.Willson13@gmail.com</a> · <a href="https://github.com/JacobWillson13">GitHub</a> · <a href="https://www.linkedin.com/in/jacob-j-willson/">LinkedIn</a></p>
@@ -20,7 +20,7 @@ I'm a data analyst with over ten years in business intelligence, financial repor
 <img src="assets/img/organizations/afrl.jpeg" alt="" class="org-logo">
 ::::
 :::: {.cv-entry-content}
-### Griffiss Institute / Air Force Research Laboratory
+### Air Force Research Laboratory
 
 **AI Research Fellow** · May 2026–Present
 
@@ -188,11 +188,11 @@ I'm a data analyst with over ten years in business intelligence, financial repor
 
 **Languages:** SQL, Python (pandas, NumPy, SciPy, PySpark, scikit-learn, Pydantic), R (tidyverse), Bash.
 
-**Statistics and machine learning:** regression, ANOVA, factorial experimental design, sampling design, statistical inference, classification, clustering and community detection; PyTorch, sentence-transformers, HDBSCAN, UMAP, NetworkX.
+**Statistics and machine learning:** regression, ANOVA, factorial experimental design, sampling design, statistical inference, classification, clustering and community detection; PyTorch, LightGBM, SHAP, sentence-transformers, HDBSCAN, UMAP, NetworkX.
 
-**LLM and retrieval systems:** Ollama, vLLM, LangChain, LangGraph, ChromaDB, Qdrant, BM25 and hybrid retrieval, LLM-based extraction and scoring, prompt versioning, evaluation-harness design.
+**LLM and retrieval systems:** Ollama, vLLM, LangChain, LangGraph, LangSmith, ChromaDB, Qdrant, BM25 and hybrid retrieval, LLM-based extraction and scoring, prompt versioning, evaluation-harness design.
 
-**Data and analytics engineering:** dbt, Snowflake, Databricks (Lakeflow, Asset Bundles), PostgreSQL, DuckDB, SQLite, MLflow, Hightouch, JSON Schema and Pydantic validation, PDF parsing (PyMuPDF, pdfplumber).
+**Data and analytics engineering:** dbt, MetricFlow, Snowflake, BigQuery, Databricks (Lakeflow, Asset Bundles), PostgreSQL, DuckDB, SQLite, MLflow, Hightouch, JSON Schema and Pydantic validation, PDF parsing (PyMuPDF, pdfplumber).
 
 **Business intelligence and visualization:** Power BI, Tableau, TIBCO Spotfire, Grafana, Streamlit, LookML, Excel and macros, matplotlib, seaborn, Quarto.
 
