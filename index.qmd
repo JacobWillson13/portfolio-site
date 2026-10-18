@@ -17,7 +17,7 @@ image: assets/img/social-card.png
 <h1 class="hero-name">Jacob Willson</h1>
 ```
 
-Data analyst and AI research fellow with the Griffiss Institute at the Air Force Research Laboratory. Over ten years in business intelligence and finance analytics at New Balance, Forrester Research, and in consulting; now building data pipelines, GPU inference infrastructure, and LLM evaluations.
+AI research fellow at the Air Force Research Laboratory. Over ten years in business intelligence and data analytics at New Balance, Forrester Research, and in consulting; now building data pipelines, LLM and agent evaluations, and GPU inference infrastructure.
 
 <p class="hero-meta">M.S. Data Science and Analytics, SUNY Polytechnic Institute, May 2027 · Clinton, New York</p>
 
@@ -35,6 +35,29 @@ Data analyst and AI research fellow with the Griffiss Institute at the Air Force
 ## Analytics Engineering and Data Platforms
 
 :::: {.project-grid .project-grid-wide}
+::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/agent-ready.webp" data-gallery="agent-ready" data-description="Accuracy by context level for Claude Haiku 5.5 and local Gemma 4 26B, on original and hard questions, with 95% intervals.">
+  <img src="assets/img/projects/agent-ready.webp" alt="Line charts of accuracy by context level: local Gemma 4 26B rises from about 20% with raw tables to 79% to 88% with full context, while Claude Haiku 5.5 stays near 94%" width="1400" height="591" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/agent-ready-dashboard.webp" data-gallery="agent-ready" data-description="LangSmith dashboard built from code: accuracy by model and context, hard questions, and the context fix." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/agent-ready-defect.webp" data-gallery="agent-ready" data-description="A LangSmith trace of the context defect: the agent groups a governed metric by a dimension that reports current state, not September." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">Analytics engineering · Agent evaluation · Semantic layer</p>
+
+### Agent-Ready Analytics
+
+A benchmark measuring how much a governed context layer of dbt docs, a MetricFlow semantic layer, and business guides changes a data agent's accuracy, cost, and latency, run on BigQuery against a synthetic SaaS company with 13 planted data traps.
+
+<div class="project-result"><span>Key finding</span><strong>With full context, local Gemma 4 26B went from 23% to 83% accuracy across 1,152 scored runs, and its gap to Claude Haiku 5.5 shrank from 43 points to 10. The eval traced the remaining errors to defects in the context layer itself.</strong></div>
+
+<p class="project-tools">BigQuery · dbt · MetricFlow · LangGraph · LangSmith · Ollama</p>
+
+[View repository →](https://github.com/JacobWillson13/agent-ready-analytics)
+:::
+
 ::: {.project-card}
 ```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/seats-to-cash.webp" data-gallery="seats-to-cash" data-description="Streamlit app: month-end ARR, 2026 ARR movements by type, and billings vs revenue vs cash.">
@@ -60,11 +83,11 @@ A dbt and Snowflake finance stack on synthetic Orb, Stripe, and Salesforce data 
 
 ::: {.project-card}
 ```{=html}
-<a class="project-figure lightbox" href="assets/img/projects/adventureworks.webp" data-gallery="adventureworks" data-description="Monthly revenue and orders by channel. Shaded months had no reseller batch; the July 2013 online expansion shows in order counts.">
-  <img src="assets/img/projects/adventureworks.webp" alt="Line charts of monthly revenue and order count by channel, with online orders jumping from about 330 to over 1,500 a month after July 2013" width="1400" height="823" loading="lazy">
+<a class="project-figure lightbox" href="assets/img/projects/adventureworks-dashboard.webp" data-gallery="adventureworks" data-description="Overview page of the five-page Databricks AI/BI dashboard, deployed from JSON in the repository.">
+  <img src="assets/img/projects/adventureworks-dashboard.webp" alt="Databricks AI/BI dashboard overview showing $110M revenue, 30.53K orders, monthly revenue by channel, revenue by category, and revenue by territory and channel" width="1047" height="1075" loading="lazy">
   <span class="figure-count">4 figures</span>
 </a>
-<a class="lightbox" href="assets/img/projects/adventureworks-dashboard.webp" data-gallery="adventureworks" data-description="Overview page of the five-page Databricks AI/BI dashboard, deployed from JSON in the repository." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/adventureworks.webp" data-gallery="adventureworks" data-description="Monthly revenue and orders by channel. Shaded months had no reseller batch; the July 2013 online expansion shows in order counts." hidden aria-hidden="true"></a>
 <a class="lightbox" href="assets/img/projects/adventureworks-margin.webp" data-gallery="adventureworks" data-description="Gross margin over time: total, by category, and by channel, from cost history joined by effective date." hidden aria-hidden="true"></a>
 <a class="lightbox" href="assets/img/projects/adventureworks-segments.webp" data-gallery="adventureworks" data-description="Customer segments: share of customers vs share of revenue, and recency vs value." hidden aria-hidden="true"></a>
 ```
@@ -132,6 +155,29 @@ A model that ranks 50,000 perishable store-product series each evening by their 
 <p class="project-tools">Python · SQL · DuckDB · LightGBM · SHAP · pytest</p>
 
 [View repository →](https://github.com/JacobWillson13/freshretail-stockout-prediction)
+:::
+
+::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/freight-broker.webp" data-gallery="freight-broker" data-description="Broker authority retention by entry cohort: Kaplan-Meier estimates with 95% confidence bands.">
+  <img src="assets/img/projects/freight-broker.webp" alt="Kaplan-Meier curves of broker authorities not yet revoked by months since grant, with a sharp drop at 12 months and boom-era grants falling below pre-boom grants" width="1400" height="738" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/freight-broker-entry.webp" data-gallery="freight-broker" data-description="New broker authorities granted per month, 2018 to 2025: the boom-era surge and the collapse after it." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/freight-broker-hazard.webp" data-gallery="freight-broker" data-description="Monthly revocation hazard since grant, with spikes at each annual anniversary." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">Survival analysis · Public data · Market analysis</p>
+
+### Freight Broker Boom and Bust
+
+A survival analysis of 99,281 FMCSA broker authority records from 2018 to 2025, using a from-scratch Kaplan-Meier estimator validated against lifelines and DuckDB SQL checked against pandas.
+
+<div class="project-result"><span>Key finding</span><strong>Broker grants nearly doubled to 8,877 in 2022, then fell 38% from 2023 to 2024. Boom-era authorities stayed unrevoked 2.2 fewer months on average over their first three years than pre-boom entrants, and revocations spike at every anniversary.</strong></div>
+
+<p class="project-tools">Python · SQL · DuckDB · lifelines · pandas</p>
+
+[View repository →](https://github.com/JacobWillson13/freight-broker-boom-bust)
 :::
 
 ::: {.project-card}
@@ -204,6 +250,36 @@ Seven synthetic time-series generators compared on two UAV datasets for statisti
 
 ::: {.project-card}
 ```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/grateful-dead.webp" data-gallery="grateful-dead" data-description="Whole-song type-token ratio falls with length (rho = -0.41); a 50-word moving window removes most of that (rho = +0.19).">
+  <img src="assets/img/projects/grateful-dead.webp" alt="Two scatter plots against song length: whole-song type-token ratio falls as songs get longer, while the 50-word moving-window measure stays flat" width="1400" height="560" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/grateful-dead-groups.webp" data-gallery="grateful-dead" data-description="The 50 most-played songs vs the rest: longer and more repetitive, with equally varied vocabulary." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/grateful-dead-topics.webp" data-gallery="grateful-dead" data-description="Seven NMF topics on TF-IDF, stable across ten random seeds." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">NLP · Text statistics · Topic modeling</p>
+
+### Grateful Dead Lyric Analysis
+
+Tests whether the Grateful Dead's 50 most-played songs are lyrically simpler than the rest of a 309-song lyric archive, using length-robust vocabulary measures, weighted log-odds, and NMF topics.
+
+<div class="project-result"><span>Key finding</span><strong>The most-played songs look simpler on type-token ratio only because they are longer and repeat more lines; on MATTR-50 their vocabulary is just as varied (p = 0.73). What differs is subject matter: trains and the road, not reflection.</strong></div>
+
+<p class="project-tools">Python · scikit-learn · SciPy · NMF · TF-IDF</p>
+
+[View repository →](https://github.com/JacobWillson13/grateful-dead-lyric-analysis)
+:::
+
+::::
+:::::
+
+::::: {#applied-ai .project-group}
+## Applied AI and Information Systems
+
+:::: {.project-grid .project-grid-wide}
+::: {.project-card}
+```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/scio.webp" data-gallery="scio" data-description="Adjusted Rand Index: three empirical partitions agree 2 to 3 times more with each other than with the theoretical branches.">
   <img src="assets/img/projects/scio.webp" alt="Bar chart of Adjusted Rand Index showing empirical clusterings agree with each other at 0.39 to 0.45 but with theory at only 0.12 to 0.23" width="1400" height="820" loading="lazy">
   <span class="figure-count">2 figures</span>
@@ -223,13 +299,30 @@ Validation of a 121-feature influence-technique ontology using literature scorin
 
 [View repository →](https://github.com/JacobWillson13/scio-eval)
 :::
-::::
-:::::
 
-::::: {#applied-ai .project-group}
-## Applied AI and Information Systems
+::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/news-acquisition.webp" data-gallery="news-acquisition" data-description="Per-source outcome for the 26 sampled outlets, from complete text to not fetched.">
+  <img src="assets/img/projects/news-acquisition.webp" alt="Stacked bar chart of article outcomes for 26 news outlets: most reach 9 or 10 complete articles of 10, while six outlets return none because of robots.txt, HTTP 403, or paywalls" width="1346" height="1231" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/news-acquisition-robots.webp" data-gallery="news-acquisition" data-description="Named AI crawlers are blocked far more often than this study's self-identified research agent." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/news-acquisition-pipeline.webp" data-gallery="news-acquisition" data-description="The pipeline: Media Cloud discovery, polite fetching, Trafilatura extraction, and two Gemini judges." hidden aria-hidden="true"></a>
+```
 
-:::: {.project-grid .project-grid-wide}
+<p class="project-type">Data acquisition · LLM-as-judge · Responsible collection</p>
+
+### News Acquisition Feasibility
+
+A feasibility study testing whether Media Cloud and Trafilatura can supply complete article text from 30 U.S. news outlets, with a robots.txt-compliant crawler and two Gemini models judging completeness.
+
+<div class="project-result"><span>Key finding</span><strong>62% to 72% of 246 sampled URLs yielded complete text, and 89% from the 14 best outlets, an upper bound since they were picked after seeing results. Losses came mostly from publisher access policy and page boilerplate, not discovery or extraction.</strong></div>
+
+<p class="project-tools">Python · SQLite · Media Cloud · Trafilatura · Gemini · Pydantic</p>
+
+[View repository →](https://github.com/JacobWillson13/news-acquisition-feasibility)
+:::
+
 ::: {.project-card}
 ```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/dome-rag.webp" data-gallery="dome-rag" data-description="Answer-match rate by retrieval strategy in the 50-question pilot.">
