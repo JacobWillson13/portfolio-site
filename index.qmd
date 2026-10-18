@@ -127,6 +127,29 @@ A real-time pipeline streaming about 500 events per minute into Azure PostgreSQL
 
 [View repository →](https://github.com/JacobWillson13/saas-usage-stream-azure)
 :::
+::: {.project-card}
+```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/retail-sql.webp" data-gallery="retail-sql" data-description="Yearly sales indexed to 1992, log scale: e-commerce and warehouse clubs grow while department and book stores fall below their 1992 level.">
+  <img src="assets/img/projects/retail-sql.webp" alt="Line chart of yearly U.S. retail sales indexed to 1992 on a log scale: e-commerce reaches 2,412 and warehouse clubs 1,332 by 2020, while book stores fall to 77 and department stores to 64" width="1400" height="779" loading="lazy">
+  <span class="figure-count">3 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/retail-sql-ecom.webp" data-gallery="retail-sql" data-description="E-commerce against department stores: e-commerce passed department stores in 2007." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/retail-sql-forecast.webp" data-gallery="retail-sql" data-description="Department store sales, actual and forecast to 2023 by method, with the 95% interval for the linear model." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">SQL analytics · Time series · Forecasting</p>
+
+### U.S. Retail Sales Time Series in SQL
+
+Twenty-nine years of U.S. Census retail data analyzed in PostgreSQL, with window functions, change-point detection, and three-year forecasts with prediction intervals and a backtest.
+
+<div class="project-result"><span>Key finding</span><strong>E-commerce grew 11.7% a year from 1992 to 2019, against 4.2% for all retail, and passed department stores in 2007. Department stores peaked in 2000 and declined in 19 of the next 20 years.</strong></div>
+
+<p class="project-tools">PostgreSQL · SQL · Python · pandas · Jupyter</p>
+
+[View repository →](https://github.com/JacobWillson13/retail-sales-timeseries-sql)
+:::
+
 ::::
 :::::
 
