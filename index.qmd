@@ -37,11 +37,11 @@ AI research fellow at the Air Force Research Laboratory. Over ten years in busin
 :::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 ```{=html}
-<a class="project-figure lightbox" href="assets/img/projects/agent-ready.webp" data-gallery="agent-ready" data-description="Accuracy by context level for Claude Haiku 5.5 and local Gemma 4 26B, on original and hard questions, with 95% intervals.">
-  <img src="assets/img/projects/agent-ready.webp" alt="Line charts of accuracy by context level: local Gemma 4 26B rises from about 20% with raw tables to 79% to 88% with full context, while Claude Haiku 5.5 stays near 94%" width="1400" height="591" loading="lazy">
+<a class="project-figure lightbox" href="assets/img/projects/agent-ready-dashboard.webp" data-gallery="agent-ready" data-description="LangSmith dashboard built from code: accuracy by model and context, hard questions, and the context fix.">
+  <img src="assets/img/projects/agent-ready-dashboard.webp" alt="LangSmith dashboard of data agent accuracy by model and context level, with the Sonnet baseline, Gemma outcomes, hard questions, and the context fix" width="1400" height="918" loading="lazy">
   <span class="figure-count">3 figures</span>
 </a>
-<a class="lightbox" href="assets/img/projects/agent-ready-dashboard.webp" data-gallery="agent-ready" data-description="LangSmith dashboard built from code: accuracy by model and context, hard questions, and the context fix." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/agent-ready.webp" data-gallery="agent-ready" data-description="Accuracy by context level for Claude Haiku 5.5 and local Gemma 4 26B, on original and hard questions, with 95% intervals." hidden aria-hidden="true"></a>
 <a class="lightbox" href="assets/img/projects/agent-ready-defect.webp" data-gallery="agent-ready" data-description="A LangSmith trace of the context defect: the agent groups a governed metric by a dimension that reports current state, not September." hidden aria-hidden="true"></a>
 ```
 
