@@ -84,7 +84,7 @@ A dbt and Snowflake finance stack on synthetic Orb, Stripe, and Salesforce data 
 ::: {.project-card}
 ```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/adventureworks-dashboard.webp" data-gallery="adventureworks" data-description="Overview page of the five-page Databricks AI/BI dashboard, deployed from JSON in the repository.">
-  <img src="assets/img/projects/adventureworks-dashboard.webp" alt="Databricks AI/BI dashboard overview showing $110M revenue, 30.53K orders, monthly revenue by channel, revenue by category, and revenue by territory and channel" width="1047" height="1075" loading="lazy">
+  <img src="assets/img/projects/adventureworks-dashboard.webp" alt="Databricks AI/BI dashboard overview showing $110M revenue, 30.53K orders, monthly revenue by channel, revenue by category, and revenue by territory and channel" width="1400" height="927" loading="lazy">
   <span class="figure-count">4 figures</span>
 </a>
 <a class="lightbox" href="assets/img/projects/adventureworks.webp" data-gallery="adventureworks" data-description="Monthly revenue and orders by channel. Shaded months had no reseller batch; the July 2013 online expansion shows in order counts." hidden aria-hidden="true"></a>
