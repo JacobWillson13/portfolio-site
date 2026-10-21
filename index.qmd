@@ -107,6 +107,30 @@ A Databricks medallion lakehouse that turns a broken 72-file export into a dbt s
 
 ::: {.project-card}
 ```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/nfip-crs.webp" data-gallery="nfip-crs" data-description="Overview page of the Databricks AI/BI dashboard, deployed from code in the repository: each CRS class's loss cost against its break-even discount, and CRS participation by state.">
+  <img src="assets/img/projects/nfip-crs.webp" alt="Databricks AI/BI dashboard: headline that CRS discounts are right on average but two of five classes get too much, loss cost per class step of -5.9%, an interval chart flagging Class 7 and Class 9 as likely too generous, and a state map of CRS participation" width="1400" height="1030" loading="lazy">
+  <span class="figure-count">4 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/nfip-crs-designs.webp" data-gallery="nfip-crs" data-description="Measurement designs: detectable effect for the observational design and a proposed randomized trial, and the placebo check that dropped the biased original design." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/nfip-crs-job.webp" data-gallery="nfip-crs" data-description="The Databricks job: load silver, build gold, run quality checks, and run the analysis, on serverless compute." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/nfip-crs-lineage.webp" data-gallery="nfip-crs" data-description="Unity Catalog lineage for the gold panel: three silver sources, and the dashboard, notebooks, and job that read it." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">Data engineering · Databricks · Causal inference</p>
+
+### NFIP CRS Measurement
+
+A national community-year panel built from about 75 million FEMA flood insurance policy records and 2.7 million claims, used to test whether Community Rating System discounts match the losses they prevent. Gold, quality checks, and the analysis run as a Databricks job.
+
+<div class="project-result"><span>Key finding</span><strong>Discounts are right on average: each class step lowers loss cost 5.9% against a scheduled 5%. By class, the Class 7 and Class 9 discounts are 85% and 94% likely too generous, and placebo tests showed the causal effect of joining CRS cannot be measured with public data.</strong></div>
+
+<p class="project-tools">Databricks · PySpark · Delta Lake · MLflow · DuckDB · Python</p>
+
+[View repository →](https://github.com/JacobWillson13/nfip-crs-measurement)
+:::
+
+::: {.project-card}
+```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/saas-stream.webp" data-gallery="saas-stream" data-description="Live Grafana dashboard during a seeded take: event throughput, active accounts, failed payments, and outlier flags.">
   <img src="assets/img/projects/saas-stream.webp" alt="Azure Managed Grafana dashboard streaming live SaaS events, showing 476 events in the last minute, 777 active accounts, and outlier flags" width="1400" height="1013" loading="lazy">
   <span class="figure-count">3 figures</span>
@@ -157,30 +181,6 @@ Twenty-nine years of U.S. Census retail data analyzed in PostgreSQL, with window
 ## Experimentation and Decision Science
 
 :::: {.project-grid .project-grid-wide}
-::: {.project-card}
-```{=html}
-<a class="project-figure lightbox" href="assets/img/projects/nfip-crs.webp" data-gallery="nfip-crs" data-description="Overview page of the Databricks AI/BI dashboard, deployed from code in the repository: each CRS class's loss cost against its break-even discount, and CRS participation by state.">
-  <img src="assets/img/projects/nfip-crs.webp" alt="Databricks AI/BI dashboard: headline that CRS discounts are right on average but two of five classes get too much, loss cost per class step of -5.9%, an interval chart flagging Class 7 and Class 9 as likely too generous, and a state map of CRS participation" width="1400" height="1030" loading="lazy">
-  <span class="figure-count">4 figures</span>
-</a>
-<a class="lightbox" href="assets/img/projects/nfip-crs-designs.webp" data-gallery="nfip-crs" data-description="Measurement designs: detectable effect for the observational design and a proposed randomized trial, and the placebo check that dropped the biased original design." hidden aria-hidden="true"></a>
-<a class="lightbox" href="assets/img/projects/nfip-crs-job.webp" data-gallery="nfip-crs" data-description="The Databricks job: load silver, build gold, run quality checks, and run the analysis, on serverless compute." hidden aria-hidden="true"></a>
-<a class="lightbox" href="assets/img/projects/nfip-crs-lineage.webp" data-gallery="nfip-crs" data-description="Unity Catalog lineage for the gold panel: three silver sources, and the dashboard, notebooks, and job that read it." hidden aria-hidden="true"></a>
-```
-
-<p class="project-type">Causal inference · Insurance pricing · Databricks</p>
-
-### NFIP CRS Measurement
-
-A national community-year panel built from about 75 million FEMA flood insurance policy records and 2.7 million claims, used to test whether Community Rating System discounts match the losses they prevent. Gold, quality checks, and the analysis run as a Databricks job.
-
-<div class="project-result"><span>Key finding</span><strong>Discounts are right on average: each class step lowers loss cost 5.9% against a scheduled 5%. By class, the Class 7 and Class 9 discounts are 85% and 94% likely too generous, and placebo tests showed the causal effect of joining CRS cannot be measured with public data.</strong></div>
-
-<p class="project-tools">Databricks · PySpark · Delta Lake · MLflow · DuckDB · Python</p>
-
-[View repository →](https://github.com/JacobWillson13/nfip-crs-measurement)
-:::
-
 ::: {.project-card}
 ```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/stockout.webp" data-gallery="stockout" data-description="Share of alerts that are real stockouts at each daily review capacity, model vs best baseline, on the held-out test week.">
