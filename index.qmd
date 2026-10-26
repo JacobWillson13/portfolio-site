@@ -350,6 +350,30 @@ Tests whether the Grateful Dead's 50 most-played songs are lyrically simpler tha
 :::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 ```{=html}
+<a class="project-figure lightbox" href="assets/img/projects/dgx-spark.webp" data-gallery="dgx-spark" data-description="Throughput against time per output token for one node, two separate servers (DP2), and one server split across both nodes (TP2), Qwen3.8 27B BF16.">
+  <img src="assets/img/projects/dgx-spark.webp" alt="Line chart of median time per output token against total output tokens per second: one server across both nodes stays lowest and reaches 324 tokens per second at 256 concurrent requests, while one node stalls near 170" width="1400" height="840" loading="lazy">
+  <span class="figure-count">4 figures</span>
+</a>
+<a class="lightbox" href="assets/img/projects/dgx-spark-topology.webp" data-gallery="dgx-spark" data-description="Cluster topology: a laptop and 10 GbE switch for management, two DGX Sparks joined by a direct ConnectX-7 link at 196 Gb/s." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/dgx-spark-tp-pp.webp" data-gallery="dgx-spark" data-description="Llama 3.3 70B across the link: tensor parallelism runs 2.01x faster than pipeline parallelism single-stream and 1.65x at 32 concurrent." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/dgx-spark-precision.webp" data-gallery="dgx-spark" data-description="GSM8K accuracy and KV-cache capacity by precision: FP8 keeps accuracy and adds 45% capacity; NVFP4 adds 64% and costs 14 points." hidden aria-hidden="true"></a>
+```
+
+<p class="project-type">AI infrastructure · LLM serving · Benchmarking</p>
+
+### Multi-Node LLM Inference on Two DGX Sparks
+
+Two NVIDIA DGX Sparks joined by one 200 GbE cable and run as a single vLLM cluster, measuring the link, how to split a model across nodes, when the second node pays off, and what lower precision costs. Every throughput run passed a correctness gate first, and every prediction was recorded before its run.
+
+<div class="project-result"><span>Key finding</span><strong>One server split across both nodes reached 1.90x one node's throughput and matched or beat two separate servers at every load. Tensor parallelism ran 2x faster than pipeline parallelism, the reverse of the pilot's prediction, and FP8 cost 1.8 GSM8K points against 13.7 for NVFP4.</strong></div>
+
+<p class="project-tools">vLLM · Ray · NCCL · RDMA · ConnectX-7 · Python</p>
+
+[View repository →](https://github.com/JacobWillson13/dgx-spark-cluster)
+:::
+
+::: {.project-card}
+```{=html}
 <a class="project-figure lightbox" href="assets/img/projects/scio.webp" data-gallery="scio" data-description="Adjusted Rand Index: three empirical partitions agree 2 to 3 times more with each other than with the theoretical branches.">
   <img src="assets/img/projects/scio.webp" alt="Bar chart of Adjusted Rand Index showing empirical clusterings agree with each other at 0.39 to 0.45 but with theory at only 0.12 to 0.23" width="1400" height="820" loading="lazy">
   <span class="figure-count">2 figures</span>
