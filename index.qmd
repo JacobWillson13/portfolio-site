@@ -350,11 +350,11 @@ Tests whether the Grateful Dead's 50 most-played songs are lyrically simpler tha
 :::: {.project-grid .project-grid-wide}
 ::: {.project-card}
 ```{=html}
-<a class="project-figure lightbox" href="assets/img/projects/dgx-spark.webp" data-gallery="dgx-spark" data-description="Throughput against time per output token for one node, two separate servers (DP2), and one server split across both nodes (TP2), Qwen3.8 27B BF16.">
-  <img src="assets/img/projects/dgx-spark.webp" alt="Line chart of median time per output token against total output tokens per second: one server across both nodes stays lowest and reaches 324 tokens per second at 256 concurrent requests, while one node stalls near 170" width="1400" height="840" loading="lazy">
+<a class="project-figure lightbox" href="assets/img/projects/dgx-spark.webp" data-gallery="dgx-spark" data-description="Cluster topology: a laptop and 10 GbE switch for management, two DGX Sparks joined by a direct ConnectX-7 link at 196 Gb/s.">
+  <img src="assets/img/projects/dgx-spark.webp" alt="Cluster topology diagram: a laptop and management switch connect to spark1 and spark2, which are joined by a direct ConnectX-7 200 GbE link over two PCIe paths at 196 Gb/s, beside a hardware table" width="1400" height="747" loading="lazy">
   <span class="figure-count">4 figures</span>
 </a>
-<a class="lightbox" href="assets/img/projects/dgx-spark-topology.webp" data-gallery="dgx-spark" data-description="Cluster topology: a laptop and 10 GbE switch for management, two DGX Sparks joined by a direct ConnectX-7 link at 196 Gb/s." hidden aria-hidden="true"></a>
+<a class="lightbox" href="assets/img/projects/dgx-spark-frontier.webp" data-gallery="dgx-spark" data-description="Throughput against time per output token for one node, two separate servers (DP2), and one server split across both nodes (TP2), Qwen3.8 27B BF16." hidden aria-hidden="true"></a>
 <a class="lightbox" href="assets/img/projects/dgx-spark-tp-pp.webp" data-gallery="dgx-spark" data-description="Llama 3.3 70B across the link: tensor parallelism runs 2.01x faster than pipeline parallelism single-stream and 1.65x at 32 concurrent." hidden aria-hidden="true"></a>
 <a class="lightbox" href="assets/img/projects/dgx-spark-precision.webp" data-gallery="dgx-spark" data-description="GSM8K accuracy and KV-cache capacity by precision: FP8 keeps accuracy and adds 45% capacity; NVFP4 adds 64% and costs 14 points." hidden aria-hidden="true"></a>
 ```
