@@ -223,7 +223,8 @@ main.content {
   font-size: 1.5rem;
 }
 
-.project-card .pdf-link + .pdf-link {
+.project-card .pdf-link + .pdf-link,
+.project-card .project-link + .project-link {
   margin-left: 1.1rem;
 }
 
